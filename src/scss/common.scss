@@ -1,0 +1,18 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+.header {
+   grid-area: header;
+}
+
+.page {
+   grid-area: main;
+}
+
+
+.side-bar {
+   grid-area: aside;
+}
+
+.footer {
+   grid-area: footer;
+}
