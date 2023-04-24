@@ -75,6 +75,7 @@
 		"clipboard": "^2.0.11",
 		"gulp-cheerio": "^1.0.0",
 		"isotope-layout": "^3.0.6",
+		"jquery": "^3.6.4",
 		"simplebar": "latest"
 	}
 }

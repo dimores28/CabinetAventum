@@ -30,9 +30,9 @@ flsFunctions.addTouchClass();
 /* Додавання loaded для HTML після повного завантаження сторінки */
 // flsFunctions.addLoadedClass();
 /* Модуль для роботи з меню (Бургер) */
-// flsFunctions.menuInit();
+flsFunctions.menuInit();
 /* Враховування плаваючої панелі на мобільних пристроях при 100vh */
-// flsFunctions.fullVHfix();
+flsFunctions.fullVHfix();
 /* Форматування чисел */
 // import './libs/wNumb.min.js';
 
@@ -113,7 +113,7 @@ flsForms.formFieldsInit({
 import './libs/select.js'
 
 //Модуль "bootstrap toast"
-import './files/toast.js'
+// import './files/toast.js'
 
 /* Модуль роботи з календарем */
 // import './files/forms/datepicker.js'

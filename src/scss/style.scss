@@ -84,8 +84,9 @@ body {
    "aside main"
    "aside footer";
 
+
 	max-width: 1360px;
-    margin: 0 auto;
+   margin: 0 auto;
 
 	overflow: hidden;
 	@supports (overflow: clip) {
@@ -98,6 +99,14 @@ body {
 	// Фікс для слайдерів
 	> * {
 		min-width: 0;
+	}
+
+	@media (max-width:$tablet){
+		grid-template-areas:
+			"header"
+			"main"
+			"footer";
+			grid-template-columns: auto;
 	}
 }
 // Обмежуючий контейнер ======================================================================================================================================================================================================================

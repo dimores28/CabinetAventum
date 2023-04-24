@@ -3,6 +3,7 @@ import { isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js";
 import ClipboardJS from 'clipboard';
+import $ from "jquery";
 
 
 const instance = flsModules.tippy(document.querySelector('#refferal-link'));
@@ -20,4 +21,9 @@ document.querySelector('#refferal-link')?.addEventListener('click', function(e) 
 
         e.clearSelection();
     });
+})
+
+$('.header__community a').on('click', function (e) {
+    e.preventDefault();
+    $('.toast').slideToggle();
 })
