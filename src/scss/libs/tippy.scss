@@ -6,11 +6,13 @@
 }
 .tippy-box {
 	position: relative;
-	background-color: #333;
-	color: #fff;
-	border-radius: 4px;
-	font-size: 14px;
-	line-height: 1.4;
+	background-color: #fff;
+	color: #74DA06;
+	padding: 13px 17px;
+	border: 1px solid #74DA06;
+	border-radius: 9px;
+	font-size: 16px;
+	line-height: 20px;
 	outline: 0;
 	transition-property: transform, visibility, opacity;
 }

@@ -1,19 +1,26 @@
 @font-face {
-	font-family: 'Compo';
+	font-family: Compov2Bold;
+	font-display: swap;
+	src: url("../fonts/Compov2Bold.woff2") format("woff2"), url("../fonts/Compov2Bold.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: Compo;
 	font-display: swap;
 	src: url("../fonts/Compo.woff2") format("woff2"), url("../fonts/Compo.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'Compov2Bold';
+	font-family: Compov2Light;
 	font-display: swap;
-	src: url("../fonts/Compov2Bold.woff2") format("woff2"), url("../fonts/Compov2Bold.woff") format("woff");
-	font-weight: 700;
+	src: url("../fonts/Compov2Light.woff2") format("woff2"), url("../fonts/Compov2Light.woff") format("woff");
+	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'europecondensedc';
+	font-family: europecondensedc;
 	font-display: swap;
 	src: url("../fonts/europecondensedc.woff2") format("woff2"), url("../fonts/europecondensedc.woff") format("woff");
 	font-weight: 400;

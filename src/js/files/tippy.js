@@ -12,6 +12,5 @@ import "../../scss/libs/tippy.scss";
 //import 'tippy.js/dist/tippy.css';
 
 // Запускаємо та додаємо в об'єкт модулів
-flsModules.tippy = tippy('[data-tippy-content]', {
-
-});
+tippy('[data-tippy-content]', {});
+flsModules.tippy = tippy;

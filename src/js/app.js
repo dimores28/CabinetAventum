@@ -26,7 +26,7 @@ import * as flsFunctions from "./files/functions.js";
 /* (i) необхідно для коректного відображення webp із css */
 flsFunctions.isWebp();
 /* Додавання класу touch для HTML якщо браузер мобільний */
-// flsFunctions.addTouchClass();
+flsFunctions.addTouchClass();
 /* Додавання loaded для HTML після повного завантаження сторінки */
 // flsFunctions.addLoadedClass();
 /* Модуль для роботи з меню (Бургер) */
@@ -76,7 +76,9 @@ flsFunctions.isWebp();
 Документація: https://template.fls.guru/template-docs/funkcional-popup.html
 Сніппет (HTML): pl, pop
 */
-// import './libs/popup.js'
+import './libs/popup.js'
+
+
 
 /*
 Модуль паралаксу мишею
@@ -108,7 +110,10 @@ flsForms.formFieldsInit({
 // flsForms.formRating();
 
 /* Модуль роботи з select. */
-// import './libs/select.js'
+import './libs/select.js'
+
+//Модуль "bootstrap toast"
+import './files/toast.js'
 
 /* Модуль роботи з календарем */
 // import './files/forms/datepicker.js'
@@ -138,7 +143,7 @@ flsForms.formFieldsInit({
 Документація плагіна: https://atomiks.github.io/tippyjs/
 Сніппет (HTML): tip (додає атрибут з підказкою для html тега)
 */
-// import "./files/tippy.js";
+import "./files/tippy.js";
 
 // ========================================================================================================================================================================================================================================================
 // Робота зі слайдером (Swiper) ========================================================================================================================================================================================================================================================
@@ -189,7 +194,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 
 // Плавна навігація по сторінці
 // Документація: https://template.fls.guru/template-docs/modul-plavnoj-navigacii-po-stranice.html
-// flsScroll.pageNavigation();
+flsScroll.pageNavigation();
 
 // Функціонал додавання класів до хедеру під час прокручування
 // Документація: https://template.fls.guru/template-docs/modul-dobavleniya-klassov-k-shapke-pri-prokrutke-stranicy.html
