@@ -1,3 +1,18 @@
 //====================================================================================================
+.footer {
+
+    // .footer__container
+    &__container {
+    }
+
+    // .footer__content
+    &__content {
+        text-align: right;
+        font-family: Compov2Light;
+        @include adaptiveValue("font-size", 16, 14);
+        line-height: 16px;
+        text-transform: uppercase;
+    }
+}
 
 //====================================================================================================

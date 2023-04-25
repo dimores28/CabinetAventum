@@ -21,3 +21,12 @@
    background-color: tomato;
    color: yellow;
  }
+
+ .page-title {
+   font-family: Compov2Light;
+   @include adaptiveValue("font-size", 32, 28);
+   line-height: 100%;
+   color: #FFFFFF;
+   text-transform: uppercase;
+   margin-bottom: 32px;
+ }
