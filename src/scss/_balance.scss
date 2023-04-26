@@ -10,6 +10,7 @@
 
     // .balance__facilities
     &__facilities {
+        @include adaptiveValue("margin-bottom", 50, 30, 0, 1360, 768);
     }
 
     // .balance__form
@@ -68,6 +69,7 @@
 
     // .balance__operations
     &__operations {
+        margin-bottom: 18px;
     }
 }
 

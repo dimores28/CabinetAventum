@@ -1,5 +1,58 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
+//Scroll bar====================================================================================================
+
+/* Для WebKit-браузеров (Chrome, Safari, Opera) */
+::-webkit-scrollbar {
+   width: 8px;
+ }
+ 
+ ::-webkit-scrollbar-track {
+   background: #210052;
+   border-radius: 4px;
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+   background: #74DA06;
+   border-radius: 4px;
+;
+ }
+ 
+ /* Для Firefox */
+ ::-moz-scrollbar {
+   width: 8px;
+ }
+ 
+ ::-moz-scrollbar-track {
+   background: #210052;
+   border-radius: 4px;
+ }
+ 
+ ::-moz-scrollbar-thumb {
+   background: #74DA06;
+   border-radius: 4px;
+;
+ }
+ 
+ /* Для Internet Explorer и Edge */
+ ::-ms-scrollbar {
+   width: 8px;
+ }
+ 
+ ::-ms-scrollbar-track {
+   background: #210052;
+   border-radius: 4px;
+ }
+ 
+ ::-ms-scrollbar-thumb {
+   background: #74DA06;
+   border-radius: 4px;
+;
+ }
+ 
+//====================================================================================================
+
+//====================================================================================================
 .header {
    grid-area: header;
 }
@@ -30,6 +83,8 @@
    text-transform: uppercase;
    margin-bottom: 32px;
  }
+
+ //====================================================================================================
 
 //Payment system====================================================================================================
  .payment-system {
@@ -223,4 +278,170 @@
    }
 }
 
+//====================================================================================================
+
+//History ====================================================================================================
+.history {
+   background: #FFFFFF;
+   border-radius: 8px;
+   padding: 18px 28px 30px 30px;
+
+   // .history__header
+   &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 28px;
+   }
+
+   // .history__title
+   &__title {
+      font-size: 24px;
+      line-height: 30px;
+      color: #210052;
+   }
+
+   // .history__linck
+   &__linck {
+      font-family: Compov2Light;
+      font-size: 24px;
+      line-height: 100%;
+      color: #74DA06;
+      
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      position: relative;
+
+      svg {
+         margin-top: 2px;
+      }
+
+      &::before {
+         content: '';
+         display: block;
+         position: absolute;
+         left: 2px;
+         bottom: -2px;
+         height: 2px;
+         width: 0%;
+         background: #74DA06;
+         transition: all 0.4s ease-in;
+      }
+
+      &:hover {
+         &::before {
+            width: 100%;
+         }
+      }
+   }
+
+   // .history__body
+   &__body {
+      overflow-x: auto;
+      @include adaptiveValue("margin-bottom", 58, 32, 0, 1360, 768);
+   }
+
+   // .history__footer
+   &__footer {
+   }
+}
+//====================================================================================================
+
+//Table====================================================================================================
+tbody, td, tfoot, th, thead, tr {
+   border-color: inherit;
+   border-style: solid;
+   border-width: 0;
+}
+
+.table {
+   width: 100%;
+   min-width: 530px;
+   font-size: 14px;
+   line-height: 17px;
+   color: #210052;
+   text-align: left;
+   vertical-align: top;
+   caption-side: bottom;
+   border-collapse: collapse;
+
+   > tbody {
+      vertical-align: inherit;
+   }
+
+   > thead {
+      vertical-align: bottom;
+      border-bottom: 1px solid rgba(33, 0, 82, .2);
+   }
+
+   th, td {
+      font-size: 16px;
+      line-height: 18px;
+      font-style: normal;
+      font-weight: 400;
+      color: #210052;
+      padding: 15px 15px 15px 0;
+   }
+
+   tbody {
+      th, td {
+         vertical-align: middle;
+      }
+   }
+
+   button {
+      font-family: Compov2Light;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 100%;
+      color: #FFFFFF;
+
+      padding: 6px 13px;
+      background: #74DA06;
+      border-radius: 8px;
+   }
+}
+//====================================================================================================
+
+//Pagination====================================================================================================
+.pagination {
+   display: flex;
+   justify-content: center;
+   padding-left: 0;
+   list-style: none;
+   gap: 6px;
+}
+.page-item {
+   
+}
+
+.page-link {
+   position: relative;
+   display: block;
+   padding: 6px 13px;
+
+   font-family: Compov2Light;
+   font-style: normal;
+   font-weight: 300;
+   font-size: 16px;
+   line-height: 16px;
+   color: #74DA06;
+
+   border: 1px solid #74DA06;
+   border-radius: 8px;
+   background: transparent;
+   transition: all 0.4s ease-in;
+
+   &:hover {
+      background: #74DA06;
+      color: #fff;
+   }
+
+   &_dots {
+      border: 1px solid transparent;
+   }
+}
 //====================================================================================================
