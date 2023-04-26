@@ -30,3 +30,197 @@
    text-transform: uppercase;
    margin-bottom: 32px;
  }
+
+//Payment system====================================================================================================
+ .payment-system {
+   margin-bottom: 35px;
+
+   // .payment-system__title
+   &__title {
+      margin-bottom: 18px;
+   }
+
+   // .payment-system__switch
+   &__switch {
+      display: flex;
+      @include adaptiveValue("gap", 56, 24, 0, 1360, 768);
+
+      @media (max-width: 560px){
+         flex-wrap: wrap;
+      }
+   }
+
+   // .payment-system__item
+   &__item {
+      padding: 0px 0px 0px 45px;
+      font-size: 16px;
+      line-height: 30px;
+      color:#b2b2b2;
+      margin-bottom: 20px;
+      position: relative;
+
+      @media (max-width: 560px){
+         flex-basis: calc(25% - 24px);
+      }
+
+	   cursor: pointer;
+      transition: all 0.4s ease-in;
+
+      ._check & {
+         color: #000;
+      }
+
+      &._check::after {
+         transform: scale(1);
+      }
+
+      &:before{
+         content: '';
+         width: 20px;
+         height: 20px;
+         position: absolute;
+         top: 20px;
+         left: 0;
+         background-color: #fff;
+         border-radius: 50%;
+         -webkit-box-shadow: 0 0 3px rgba(116, 218, 6, 1);
+         box-shadow: 0 0 3px rgba(116, 218, 6, 1);
+         border: 1px solid #74DA06;
+      }
+
+      &:after{
+         position: absolute;
+         width: 12px;
+         height: 12px;
+         top: 24px;
+         left: 4px;
+         background-color: #74DA06;
+         content: '';
+         border-radius: 50%;
+      
+         transition: all 0.3s ease 0s;
+
+         transform: scale(0);
+      }
+
+      input {
+         display: none;
+      }
+   }
+
+   // .payment-system__desc
+   &__desc {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+   }
+
+   // .payment-system__logo
+   &__logo {
+      width: 57px;
+      height: 57px;
+      border-radius: 50%;
+      background: rgba(116, 218, 6, 0.38);
+      margin-bottom: 6px;
+      position: relative;
+
+      img {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+   }
+
+   // .payment-system__neme
+   &__neme {
+      font-size: 14px;
+      line-height: 100.3%;
+      text-align: center;
+      text-transform: uppercase;
+      color: #210052;
+   }
+}
+//====================================================================================================
+
+//Component input-control====================================================================================================
+.input-control {
+   position: relative;
+   // .input-control__field
+   &__field {
+      width: 100%;
+      padding: 7px 35px;
+      border: 1px solid #74DA06;
+      border-radius: 8px;
+
+      font-family: 'EuropeCondensedC';
+      font-size: 18px;
+      line-height: 18px;
+      outline: none;
+      transition: all 0.4s ease-in;
+
+      &:focus,
+      &:focus-visible,
+      &:active {
+         box-shadow: rgba(69, 16, 148, 0.16) 0px 1px 4px, rgb(69, 16, 148) 0px 0px 0px 3px;
+      }
+
+      @media (max-width:$mobile){
+         padding: 7px 12px; 
+      }
+   }
+
+   // .input-control__btn
+   &__btn {
+      position: absolute;
+      padding: 9px 35px;
+      top: 0;
+      right: 0;
+      background: #74DA06;
+      border-radius: 8px;
+      font-family: Compov2Light;
+      font-size: 20px;
+      line-height: 100%;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      outline: none;
+      transition: all 0.4s ease-in;
+
+      &:focus,
+      &:focus-visible,
+      &:active {
+         box-shadow: rgba(69, 16, 148, 0.16) 0px 1px 4px, rgb(69, 16, 148) 0px 0px 0px 3px;
+      }
+
+      @media (max-width:$mobile){
+         padding: 9px 14px;   
+      }
+   }
+}
+
+.input-primary {
+   width: 100%;
+   padding: 7px 35px;
+   border: 1px solid #74DA06;
+   border-radius: 8px;
+
+   font-family: 'EuropeCondensedC';
+   font-size: 18px;
+   line-height: 18px;
+   outline: none;
+   transition: all 0.4s ease-in;
+
+   &:focus,
+   &:focus-visible,
+   &:active {
+      box-shadow: rgba(69, 16, 148, 0.16) 0px 1px 4px, rgb(69, 16, 148) 0px 0px 0px 3px;
+   }
+
+   @media (max-width:$mobile){
+      padding: 7px 12px; 
+   }
+}
+
+//====================================================================================================

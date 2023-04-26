@@ -1,0 +1,151 @@
+.balance {
+
+    // .balance__container
+    &__container {
+    }
+
+    // .balance__title
+    &__title {
+    }
+
+    // .balance__facilities
+    &__facilities {
+    }
+
+    // .balance__form
+    &__form {
+    }
+
+    // .balance__form-title
+
+    &__form-title {
+        margin-bottom: 16px;
+    }
+
+    // .balance__form-block
+    &__form-block {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        @media (max-width:$mobile){
+             flex-wrap: wrap; 
+        }
+    }
+
+    &__form-control {
+        flex: 1 1 50%;
+    }
+
+    &__form-text {
+        flex: 1 1 50%;
+        font-size: 18px;
+        line-height: 22px;
+        color: #210052;
+
+        a {
+            color: #74DA06;
+            transition: all 0.4s ease-in;
+            position: relative;
+        }
+
+        a::before {
+            position: absolute;
+            content: '';
+            display: block;
+            left: 4px;
+            bottom: -2px;
+            height: 2px;
+            width: 0%;
+            background: #74DA06;
+            transition: all 0.4s ease-in;
+        }
+
+        &:hover a::before{
+            width: 100%;
+        }
+    }
+
+    // .balance__operations
+    &__operations {
+    }
+}
+
+
+.form-group {
+    margin-bottom: 12px;
+
+    // .form-group__title
+    &__title {
+        margin-bottom: 12px;
+    }
+
+    // .form-group__control
+    &__control {
+        width: 50%;
+        margin-bottom: 12px;
+        margin-right: 12px;
+
+        @media (max-width:$mobile){
+            width: 100%;  
+            margin-right: 0px; 
+        } 
+    }
+
+    &__control:last-child {
+        @media (max-width:$mobile){
+            margin-bottom: 0;  
+        }
+    }
+
+    // .form-group__block
+    &__block {
+    }
+
+    // .form-group__linck
+    &__linck {
+        flex: 1 0 50%;
+        color: #74DA06;
+        font-size: 18px;
+        line-height: 22px;
+
+        position: relative;
+        transition: all 0.4s ease-in;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -2px;
+            left: 2px;
+            height: 2px;
+            background: #74DA06;
+            width: 0%;
+            transition: all 0.4s ease-in;
+        }
+
+        &:hover{
+            &::before {
+                width: 100%;
+            }
+        } 
+
+        @media (max-width:$mobile) {
+            margin-top: -12px;
+        }
+    }
+}
+
+
+.withdrawal {
+    width: 50%;
+
+    @media (max-width:$mobile){
+        width: 100%;  
+    }
+
+    &__title {
+        margin-bottom: 16px;
+    }
+}
+

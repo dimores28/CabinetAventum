@@ -5,19 +5,50 @@
 	}
 	// .tabs__title
 	&__title {
-		border: 1px solid #eee;
-		padding: rem(10) rem(15);
-		border-radius: rem(5);
+		border: 2px solid #FFFFFF;
+		padding: rem(10) rem(24);
+		border-top-left-radius: 75px;
+		border-top-right-radius: 75px;
+
+		font-family: Compov2Light;
+		font-size: 24px;
+		line-height: 100%;
+		color: #FFFFFF;
+		
 		&._tab-active {
-			border: 1px solid #000;
+			border: 2px solid #FFFFFF;
+			background: #FFFFFF;
+			color: #210052;
+		}
+
+		@media (max-width:$mobileSmall){
+			padding: rem(10) rem(18);
+			border-top-left-radius: 25px;
+			border-top-right-radius: 25px;  
+
+			font-size: 18px;
 		}
 	}
 	// .tabs__content
 	&__content {
 		border: 1px solid #eee;
 		padding: rem(10) rem(15);
+		background: #FFFFFF;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+		border-top-right-radius: 20px;
+
+		font-family: 'EuropeCondensedC';
+		color: #210052;
+		font-size: 24px;
+		line-height: 30px;
 	}
 	// .tabs__body
 	&__body {
+		padding: 28px 20px 36px 20px;
+
+		@media (max-width:$mobileSmall){
+			padding: 28px 10px 26px 10px;  
+		}
 	}
 }

@@ -27,3 +27,18 @@ $('.header__community a').on('click', function (e) {
     e.preventDefault();
     $('.toast').slideToggle();
 })
+
+//Radio
+$.each($('.payment-system__item'), function(index, val) {
+    if($(this).find('input').prop('checked')==true){
+        $(this).addClass('_check');
+    }
+});
+$('.payment-system__item').on('click', function(event) {
+    $(this).parents('.payment-system__switch').find('.payment-system__item').removeClass('_check');
+    $(this).parents('.payment-system__switch').find('.payment-system__item input').prop('checked',false);
+    $(this).toggleClass('_check');
+    $(this).find('input').prop('checked', true);
+
+    return false;
+});
