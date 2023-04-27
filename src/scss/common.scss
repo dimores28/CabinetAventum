@@ -340,11 +340,11 @@
    // .history__body
    &__body {
       overflow-x: auto;
-      @include adaptiveValue("margin-bottom", 58, 32, 0, 1360, 768);
    }
 
    // .history__footer
    &__footer {
+      @include adaptiveValue("margin-top", 58, 32, 0, 1360, 768);
    }
 }
 //====================================================================================================
@@ -402,6 +402,15 @@ tbody, td, tfoot, th, thead, tr {
       padding: 6px 13px;
       background: #74DA06;
       border-radius: 8px;
+
+      outline: none;
+      transition: all 0.4s ease-in;
+
+      &:focus,
+      &:focus-visible,
+      &:active {
+         box-shadow: rgba(69, 16, 148, 0.16) 0px 1px 4px, rgb(69, 16, 148) 0px 0px 0px 3px;
+      }
    }
 }
 //====================================================================================================
@@ -413,6 +422,10 @@ tbody, td, tfoot, th, thead, tr {
    padding-left: 0;
    list-style: none;
    gap: 6px;
+
+   @media (max-width:$mobileSmall){
+      gap: 3px;
+   }
 }
 .page-item {
    
@@ -433,11 +446,18 @@ tbody, td, tfoot, th, thead, tr {
    border: 1px solid #74DA06;
    border-radius: 8px;
    background: transparent;
+   outline: none;
    transition: all 0.4s ease-in;
 
    &:hover {
       background: #74DA06;
       color: #fff;
+   }
+
+   &:focus,
+   &:focus-visible,
+   &:active {
+      box-shadow: rgba(69, 16, 148, 0.16) 0px 1px 4px, rgb(69, 16, 148) 0px 0px 0px 3px;
    }
 
    &_dots {

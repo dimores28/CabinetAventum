@@ -1,10 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-   @@include('html/_head.htm',{ "title":"HomePage" })
+   @@include('html/_head.htm',{ "title":"Alerts" })
    <body>
       <div class="wrapper">
          @@include('html/_header.htm',{})
-         <main class="page"></main>
+         <main class="page">
+            <section class="alerts">
+               <div class="alerts__container">
+                  <div class="alerts__header">
+                     <h2 class="alerts__title page-title">Alerts</h2>
+                     <div class="alerts__filter">
+                        <button class="alerts__btn _active">All</button>
+                        <button class="alerts__btn">Investments</button>
+                        <button class="alerts__btn">Balance</button>
+                        <button class="alerts__btn">Partners</button>
+                     </div>
+                  </div>
+
+                  <div class="alerts__body">
+                     <div class="history alerts__history">
+                        <div class="history__header">
+                           <h3 class="history__title">Recent transactions</h3>
+                           <!-- <a href="#" class="history__linck">
+                              <span>More</span>
+                              <svg
+                                 width="16"
+                                 height="8"
+                                 viewBox="0 0 16 8"
+                                 fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M12.1716 0.464469L15.3536 3.64645C15.5488 3.84171 15.5488 4.15829 15.3536 4.35356L12.1716 7.53554C11.9763 7.7308 11.6597 7.7308 11.4645 7.53554C11.2692 7.34028 11.2692 7.02369 11.4645 6.82843L13.7929 4.5L3.656e-07 4.5L2.78178e-07 3.5L13.7929 3.5L11.4645 1.17158C11.2692 0.976314 11.2692 0.659732 11.4645 0.464469C11.6597 0.269207 11.9763 0.269207 12.1716 0.464469Z"
+                                    fill="#74DA06" />
+                              </svg>
+                           </a> -->
+                        </div>
+                        <div class="history__body">
+                           <table class="table">
+                              <thead>
+                                 <tr>
+                                    <th>Date</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Volume</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <th scope="row">2023-03-20 17:33:13</th>
+                                    <td>mailto:juliasnopi18@gmail.com</td>
+                                    <td>Partner deposit</td>
+                                    <td>USD 80.00</td>
+                                 </tr>
+
+                                 <tr>
+                                    <th scope="row">2023-03-20 17:33:13</th>
+                                    <td>mailto:juliasnopi18@gmail.com</td>
+                                    <td>Partner deposit</td>
+                                    <td>USD 80.00</td>
+                                 </tr>
+
+                                 <tr>
+                                    <th scope="row">2023-03-20 17:33:13</th>
+                                    <td>mailto:juliasnopi18@gmail.com</td>
+                                    <td>Partner deposit</td>
+                                    <td>USD 80.00</td>
+                                 </tr>
+
+                                 <tr>
+                                    <th scope="row">2023-03-20 17:33:13</th>
+                                    <td>mailto:juliasnopi18@gmail.com</td>
+                                    <td>Partner deposit</td>
+                                    <td>USD 80.00</td>
+                                 </tr>
+
+                                 <tr>
+                                    <th scope="row">2023-03-20 17:33:13</th>
+                                    <td>mailto:juliasnopi18@gmail.com</td>
+                                    <td>Partner deposit</td>
+                                    <td>USD 80.00</td>
+                                 </tr>
+
+                                 <tr>
+                                    <th scope="row">2023-03-20 17:33:13</th>
+                                    <td>mailto:juliasnopi18@gmail.com</td>
+                                    <td>Partner deposit</td>
+                                    <td>USD 80.00</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                        <div class="history__footer">
+                           <nav aria-label="Page navigation">
+                              <ul class="pagination">
+                                 <li class="page-item">
+                                    <a
+                                       class="page-link"
+                                       href="#"
+                                       aria-label="Previous">
+                                       <span aria-hidden="true">Previous</span>
+                                    </a>
+                                 </li>
+                                 <li class="page-item">
+                                    <a class="page-link" href="#">1</a>
+                                 </li>
+                                 <li class="page-item">
+                                    <a class="page-link" href="#">2</a>
+                                 </li>
+                                 <li class="page-item">
+                                    <a class="page-link" href="#">3</a>
+                                 </li>
+                                 <li class="page-item">
+                                    <a class="page-link page-link_dots" href="#"
+                                       >...</a
+                                    >
+                                 </li>
+                                 <li class="page-item">
+                                    <a
+                                       class="page-link"
+                                       href="#"
+                                       aria-label="Next">
+                                       <span aria-hidden="true">Next</span>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </nav>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </main>
          @@include('html/_aside.htm',{}) @@include('html/_footer.htm',{})
       </div>
       @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})

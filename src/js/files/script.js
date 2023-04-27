@@ -42,3 +42,8 @@ $('.payment-system__item').on('click', function(event) {
 
     return false;
 });
+
+$('.alerts__btn').on('click', function() {
+    $('.alerts__btn').removeClass('_active');
+    $(this).toggleClass('_active');
+})

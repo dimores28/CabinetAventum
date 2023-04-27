@@ -21,6 +21,14 @@
 			color: #210052;
 		}
 
+		outline: none;
+		transition: all 0.4s ease-in;
+
+		&:focus-visible,
+		&:active {
+			box-shadow: rgba(116, 218, 6, 0.16) 0px 1px 4px, rgb(116, 218, 6) 0px 0px 0px 3px;
+		}
+
 		@media (max-width:$mobileSmall){
 			padding: rem(10) rem(18);
 			border-top-left-radius: 25px;
