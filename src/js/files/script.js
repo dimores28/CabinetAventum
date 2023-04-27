@@ -25,7 +25,23 @@ document.querySelector('#refferal-link')?.addEventListener('click', function(e) 
 
 $('.header__community a').on('click', function (e) {
     e.preventDefault();
+    e.stopPropagation();
+
     $('.toast').slideToggle();
+    $('body').toggleClass('_toast');
+})
+
+$('body').on('click', ()=> {
+
+    if($(this).has('_toast')) {
+        $('.toast').slideUp(); 
+    }
+
+    $(this).removeClass('_toast');
+});
+
+$('.toast').on('click', (e)=> {
+    e.stopPropagation();
 })
 
 //Radio
