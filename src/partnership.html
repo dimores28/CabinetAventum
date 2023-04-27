@@ -10,9 +10,9 @@
                   <h2 class="partners__title page-title">Partners</h2>
                   <div class="partners__info info-bord">
                      <div class="info-bord__left">
-                        <article class="info-bord__item">
+                        <article class="info-bord__item info-bord__item_purple">
                            <div class="info-bord__icon">
-                              <img src="@img" alt="" />
+                              <img src="@img/icons/crown.svg" alt="crown">                               
                            </div>
                            <div class="info-bord__row">
                               <h3 class="info-bord__row-title">Level</h3>
@@ -25,9 +25,9 @@
                               <p class="info-bord__row-text">0</p>
                            </div>
                         </article>
-                        <article class="info-bord__item">
+                        <article class="info-bord__item info-bord__item_green">
                            <div class="info-bord__icon">
-                              <img src="@img" alt="" />
+                              <img src="@img/icons/smile.svg" alt="smile" />
                            </div>
                            <div class="info-bord__row">
                               <h3 class="info-bord__row-title">Mentor</h3>
@@ -40,39 +40,147 @@
                               <p class="info-bord__row-text">United Kingdom</p>
                            </div>
                         </article>
-                        <article class="info-bord__item"></article>
+                        <article class="info-bord__item info-bord__item_table">
+                           <div class="history info-bord__history">
+                              <div class="history__header">
+                                 <h3 class="history__title">Statistics</h3>
+                                 <div class="info-bord__filters">
+                                    <div>
+                                       <label for=""></label>
+                                       <input type="text" >
+                                    </div>
+                                    <div>
+                                       <label for=""></label>
+                                       <input type="text" >
+                                    </div>
+                                    <div>
+                                       <label for=""></label>
+                                       <select>
+                                          <option value="1" select>to 1st line</option>
+                                       </select>
+                                    </div>
+                                    <button>Filter</button>
+                                 </div>
+                              </div>
+                              <div class="history__body">
+                                 <table class="table">
+                                    <thead>
+                                       <tr>
+                                          <th>Index</th>
+                                          <th scope="col">Value</th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr>
+                                          <th scope="row">Total packages purchased:</th>
+                                          <td>0</td>
+                                       </tr>
+      
+                                       <tr>
+                                          <th scope="row">Total invested:</th>
+                                          <td>0 usdt</td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                           </div>
+                        </article>
                      </div>
                      <div class="info-bord__right">
-                        <article class="info-bord__item">
+                        <article class="info-bord__item info-bord__item_pinck">
                            <div class="info-bord__icon">
-                              <img src="@img" alt="" />
+                              <img src="@img/icons/dolar.svg" alt="dolara" />
                            </div>
                            <div class="info-bord__row">
-                              <h3 class="info-bord__row-title"></h3>
-                              <p class="info-bord__row-text"></p>
+                              <h3 class="info-bord__row-title">Number of partners</h3>
+                              <p class="info-bord__row-text">123</p>
                            </div>
                            <div class="info-bord__row">
-                              <h3 class="info-bord__row-title"></h3>
-                              <p class="info-bord__row-text"></p>
+                              <h3 class="info-bord__row-title">Affiliate profit</h3>
+                              <p class="info-bord__row-text">0.00 USD</p>
                            </div>
                            <div class="info-bord__row">
-                              <h3 class="info-bord__row-title"></h3>
-                              <p class="info-bord__row-text"></p>
+                              <h3 class="info-bord__row-title">Level 1 turnover</h3>
+                              <p class="info-bord__row-text">0.00 USD</p>
                            </div>
                            <div class="info-bord__row">
-                              <h3 class="info-bord__row-title"></h3>
-                              <p class="info-bord__row-text"></p>
+                              <h3 class="info-bord__row-title">Level 2 turnover</h3>
+                              <p class="info-bord__row-text">0.00 USD</p>
                            </div>
                         </article>
-                        <article class="info-bord__item">
+                        <article class="info-bord__item info-bord__item_turquoise">
                            <div class="info-bord__icon">
-                              <img src="@img" alt="" />
+                              <img src="@img/icons/info.svg" alt="info" />
                            </div>
                            <div class="info-bord__row">
-                              <h3 class="info-bord__row-title"></h3>
-                              <button></button>
+                              <h3 class="info-bord__row-title">Additional Information</h3>
+                              <button class="info-bord__btn">View</button>
                            </div>
                         </article>
+                     </div>
+                  </div>
+
+                  <div class="bonuses">
+                     <div class="bonuses__table">
+                        <h3>Bonus table</h3>
+                        <table>
+                           <thead></thead>
+                           <tbody></tbody>
+                        </table>
+                     </div>
+                     <div class="bonuses__info">
+                        <div class="bonuses__switches">
+                           <button type="button" class="bonuses__title">Royalty bonus</button>
+                           <button type="button" class="bonuses__title">Institutional bonus</button>
+                        </div>
+                        <div class="bonuses__desc bonus-desc">
+                           <div class="bonus-desc__block">
+                              <h3 class="bonus-desc__title">royalty bonus</h3>
+                              <p class="bonus-desc__text">
+                                 (from the turnover of the entire team from level 7 - receive 3% of the turnover of the entire structure)
+                              </p>
+                           </div>
+                           <div>
+                              <h3 class="bonus-desc__title">Achievement conditions:</h3>
+                              <ul class="bonus-desc__list">
+                                 <li>
+                                    $2,000 personal deposit
+                                 </li>
+                                 <li>
+                                    64 000$ turnover of personal partners
+                                 </li>
+                              </ul>
+                           </div>
+                           <p class="bonus-desc__text">
+                              Getting a bonus works until one of your team members reaches level 7. Then you will receive 3% up to and including him, and you will not be able to receive from his team.
+                           </p>
+                        </div>
+
+                        <div class="bonuses__desc bonus-desc">
+                           <div class="bonus-desc__block">
+                              <h3 class="bonus-desc__title">institutional bonus</h3>
+                              <p class="bonus-desc__text">
+                                 (I receive 1.5% of the attracted investments of the entire company)
+                              </p>
+                           </div>
+                           <div>
+                              <h3 class="bonus-desc__title">Achievement conditions:</h3>
+                              <ul class="bonus-desc__list">
+                                 <li>
+                                    upon reaching level 10
+                                 </li>
+                                 <li>
+                                    $256,000 personal deposit
+                                 </li>
+                                 <li>
+                                    $512 000 first line
+                                 </li>
+                              </ul>
+                           </div>
+                           <p class="bonus-desc__text">
+                              Receiving the bonus works until one of the two participants in the Aventum system reaches level 10 - as soon as such a second person appears, you will share all financial flows equally. And so with the advent of each new person - you will always share 2% - there will be a maximum of 4 people who will receive 0.5% of financial flows.
+                           </p>
+                        </div>
                      </div>
                   </div>
                </div>
