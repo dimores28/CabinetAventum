@@ -1,12 +1,10 @@
 //====================================================================================================
 .partners {
+   padding-top: 35px;
+   margin-bottom: 28px;
 
    // .partners__container
    &__container {
-   }
-
-   // .partners__title
-   &__title {
    }
 
    // .partners__info
@@ -19,6 +17,7 @@
 
 .info-bord {
    color: #210052;
+   margin-bottom: 38px;
 
    // .info-bord__left
    &__left {
@@ -48,6 +47,11 @@
 
       &_table {
          flex: 1 1 100%;
+         padding: 18px 14px 18px 24px;
+
+         .history {
+            padding: 0;
+         }
       }
 
       &_purple {
@@ -98,6 +102,14 @@
       font-size: 20px;
       color: #FFFFFF;
       text-transform: uppercase;
+      outline: none;
+      transition: all 0.4s ease-in;
+
+      &:focus,
+      &:focus-visible,
+      &:active {
+         box-shadow: rgba(69, 16, 148, 0.16) 0px 1px 4px, rgb(69, 16, 148) 0px 0px 0px 3px;
+      }
    }
 
    // .info-bord__row
@@ -122,7 +134,7 @@
       font-style: normal;
       font-weight: 300;
       font-size: 24px;
-      line-height: 24px;
+      line-height: 100%;
       text-transform: uppercase;
    }
 
@@ -132,6 +144,10 @@
 
    // .info-bord__filters
    &__filters {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      color: #FFFFFF;
    }
 
    // .info-bord__right
@@ -141,18 +157,170 @@
       gap: 40px;
    }
 }
+
+.filter__apply {
+   font-family: Compov2Light;
+   font-size: 20px;
+   line-height: 100%;
+   text-transform: uppercase;
+   background: #74DA06;
+   border-radius: 8px;
+   padding: 6px 24px;
+   outline: none;
+   transition: all 0.4s ease-in;
+
+   &:focus,
+   &:focus-visible,
+   &:active {
+      box-shadow: rgba(69, 16, 148, 0.16) 0px 1px 4px, rgb(69, 16, 148) 0px 0px 0px 3px;
+   }
+}
+
+.datepicker {
+   display: flex;
+   gap: 5px;
+
+   .qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
+      background: #74DA06;
+   }
+
+   .range-end {
+      background: #873BFF;
+  }
+
+  .qs-active, .qs-range-start, .qs-range-end {
+   background: #873BFF;
+}
+}
+
+.date-input {
+   position: relative;
+   font-family: Compov2Light;
+   font-size: 20px;
+   line-height: 100%;
+
+   label {
+      background: #74DA06;
+      border-radius: 8px;
+      text-transform: uppercase;
+      padding: 6px 12px;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+   }
+
+   input {
+      width: 100%;
+      border: 1px solid #74DA06;
+      border-radius: 8px;
+      padding: 3px 7px 3px 56px;
+
+      outline: none;
+      transition: all 0.4s ease-in;
+   
+      &:focus,
+      &:focus-visible,
+      &:active {
+         box-shadow: rgba(69, 16, 148, 0.16) 0px 1px 4px, rgb(69, 16, 148) 0px 0px 0px 3px;
+      }
+   }
+}
+
+.turnover-select {
+   position: relative;
+
+   label {
+      font-family: Compov2Light;
+      font-size: 20px;
+      line-height: 100%;
+      color: rgba(69, 16, 148, 0.26);
+
+      padding: 6px 7px 6px 56px;
+      border: 1px solid #74DA06;
+      border-radius: 8px;
+   }
+
+   select {
+      position: absolute;
+   }
+}
 //====================================================================================================
 
 //====================================================================================================
 
 .bonuses {
+   display: flex;
+   gap: 26px;
+
+   @media (max-width:$mobile){
+       flex-wrap: wrap;
+   }
 
    // .bonuses__table
    &__table {
+      flex: 1 1 660px;
+      padding: 16px 0px 32px 0px;
+      background: #210052;
+      border-radius: 8px;
+      
+
+      h3 {
+         font-size: 24px;
+         line-height: 30px;
+         padding-left: 24px;
+         margin-bottom: 15px;
+      }
+
+      table {
+         width: 100%;
+         caption-side: bottom;
+         border-collapse: collapse;
+      }
+
+      thead {
+         vertical-align: middle;
+         background: #74DA06;
+         text-align: left;
+      }
+
+      tbody {
+         vertical-align: inherit;
+
+         th, td {
+            vertical-align: middle;
+         }
+      }
+
+      th {
+         font-size: 14px;
+         line-height: 17px;
+         color: #210052;
+         padding: 13px 30px 15px 30px;
+
+         @media (max-width:$mobileSmall){
+            padding: 13px 10px 15px 10px;
+         }
+      }
+
+      td {
+         font-family: Compov2Light;
+         font-style: normal;
+         font-weight: 300;
+         font-size: 20px;
+         line-height: 100%;
+         text-transform: uppercase;
+         padding: 13px 0px 13px 30px;
+
+         @media (max-width:$mobileSmall){
+            padding: 13px 10px 13px 10px;  
+         }
+      }
    }
 
    // .bonuses__info
    &__info {
+      flex: 1 1 303px;
       padding: 9px 18px 32px 18px;
       background: #210052;
       border-radius: 8px;
@@ -160,6 +328,7 @@
 
    // .bonuses__switches
    &__switches {
+      margin-bottom: 31px;
    }
 
    // .bonuses__title
@@ -172,10 +341,24 @@
       color: #74DA06;
       font-size: 24px;
       line-height: 100%;
+      outline: none;
+      transition: all 0.4s ease-in;
+      margin-bottom: 8px;
+
+      &._tabOpen {
+         color: #FFFFFF;
+         background: #74DA06;
+      }
+
+      &:focus-visible,
+		&:active {
+			box-shadow: rgba(116, 218, 6, 0.16) 0px 1px 4px, rgb(116, 218, 6) 0px 0px 0px 3px;
+		}
    }
 
    // .bonuses__desc
    &__desc {
+      display: none;
    }
 }
 
@@ -184,18 +367,33 @@
 
    // .bonus-desc__block
    &__block {
+      margin-bottom: 31px;
    }
 
    // .bonus-desc__title
    &__title {
+      font-family: Compov2Light;
+      font-size: 24px;
+      line-height: 100%;
+      text-transform: uppercase;
+      margin-bottom: 9px;
    }
 
    // .bonus-desc__text
    &__text {
+      font-size: 20px;
+      line-height: 117%;
    }
 
    // .bonus-desc__list
    &__list {
+      font-size: 20px;
+      line-height: 117%;
+
+      li {
+         list-style-type: disc;
+         list-style: inside;
+      }
    }
 }
 //====================================================================================================

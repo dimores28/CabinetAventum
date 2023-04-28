@@ -63,3 +63,47 @@ $('.alerts__btn').on('click', function() {
     $('.alerts__btn').removeClass('_active');
     $(this).toggleClass('_active');
 })
+
+
+
+$('.bonuses__title').each(function(indx, element){
+    if( $(element).attr('aria-expanded') === 'true') {
+        $(element).toggleClass('_tabOpen');
+        $($(element).attr('data-bs-target')).slideDown();
+    }
+});
+
+$('.bonuses__title').on('click', function() {
+    $('.bonuses__title').removeClass('_tabOpen');
+    $(this).addClass('_tabOpen');
+
+    $('.bonus-desc').slideUp();
+    $($(this).attr('data-bs-target')).slideDown();
+
+});
+
+const start = flsModules.datepicker('#dateFrom', {
+     id: 1,
+     formatter: (input, date, instance) => {
+        const options = { year: '2-digit', month: '2-digit', day: '2-digit' };
+        const value = date.toLocaleDateString('en-UK', options)
+        input.value = value
+    }
+});
+const end = flsModules.datepicker('#dateTo', { 
+    id: 1,
+    formatter: (input, date, instance) => {
+        const options = { year: '2-digit', month: '2-digit', day: '2-digit' };
+        const value = date.toLocaleDateString('en-UK', options)
+        input.value = value
+    }
+ });
+
+
+ $('.info-bord__btn').on('click', function() {
+    flsModules.popup.open('#popup')
+ })
+
+ document.addEventListener("afterPopupOpen", function (e) {
+    $('body').css("padding-right", "0px");
+});
