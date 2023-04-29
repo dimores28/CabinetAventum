@@ -465,3 +465,48 @@ tbody, td, tfoot, th, thead, tr {
    }
 }
 //====================================================================================================
+
+//====================================================================================================
+.btn-group {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+   padding: 14px 18px;
+   background: #210052;
+   border-radius: 11px;
+}
+.btn {
+   font-family: Compov2Light;
+   font-style: normal;
+   font-weight: 300;
+   font-size: 24px;
+   line-height: 100%;
+   padding: 6px 13px;
+   border-radius: 8px;
+   outline: none;
+   transition: all 0.4s ease-in;
+}
+
+.btn-white {
+   color: #74DA06;
+   background: #FFFFFF;
+
+   &._active {
+      color:#FFFFFF;
+      background: #74DA06;
+   }
+
+   &:hover {
+      background: #74DA06;
+      color: #fff;
+   }
+
+   &:focus,
+   &:focus-visible,
+   &:active {
+      box-shadow: rgba(116, 218, 6, 0.16) 0px 1px 4px, rgb(116, 218, 6) 0px 0px 0px 3px;
+   }
+
+}
+
+//====================================================================================================

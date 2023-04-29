@@ -1,0 +1,125 @@
+.tickets {
+   padding-top: 35px;
+   margin-bottom: 28px;
+
+   // .tickets__containet
+   &__containet {
+   }
+
+   // .tickets__header
+   &__header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+
+      .btn-group {
+         flex-wrap: wrap;
+
+         .btn{
+            @media (max-width:$mobileSmall){
+                flex: 1 1 calc(50% - 12px); 
+            }
+
+            @media (max-width: 340px){
+               flex: 1 1 100%; 
+           }
+         }
+      }
+   }
+
+   // .tickets__title
+   &__title {
+      margin: 0;
+   }
+
+   // .tickets__filters
+   &__filters {
+   }
+
+   // .tickets__btn
+   &__btn {
+   }
+
+   // .tickets__controls
+   &__controls {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      @include adaptiveValue("margin-bottom", 40, 24, 0, 1360, 768);
+
+      button {
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         color:#FFFFFF;
+         background: #74DA06;
+
+         svg {
+            fill: #FFFFFF;
+            transition: all 0.4s ease-in;
+         }
+
+         &:hover {
+            color: #74DA06;
+            background: #FFFFFF;
+
+            svg {
+               fill: #74DA06;
+            }
+         }
+
+         &:focus,
+         &:focus-visible,
+         &:active {
+            box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px, rgb(255, 255, 255) 0px 0px 0px 3px;
+         }
+      }
+
+      a {
+         color: #74DA06;
+         font-family: Compov2Light;
+         font-style: normal;
+         font-weight: 300;
+         font-size: 24px;
+         line-height: 100%;
+         position: relative;
+         outline: none;
+         border-radius: 8px;
+         padding: 4px;
+         transition: all 0.4s ease-in;
+
+         &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            left: 0px;
+            bottom: -2px;
+            height: 2px;
+            width: 0%;
+            background: #74DA06;
+            transition: all 0.4s ease-in;
+         }
+
+         &:focus,
+         &:focus-visible,
+         &:active {
+            box-shadow: rgba(116, 218, 6, 0.16) 0px 1px 4px, rgb(116, 218, 6) 0px 0px 0px 3px;
+         }
+      }
+
+      a:hover {
+         &::before {
+            width: 100%;
+         }
+      }
+   }
+
+   // .tickets__history
+   &__history {
+   }
+}
+
+

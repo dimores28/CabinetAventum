@@ -482,3 +482,145 @@
    }
 }
 //====================================================================================================
+
+//====================================================================================================
+
+.info-popup {
+   background: #451094;
+   border: 3px solid #210052;
+   border-radius: 25px;
+   padding: 41px 47px 50px 47px;
+   max-width: 640px;
+
+   @media (max-width: 620px){
+      padding: 32px 20px 24px 20px;
+   }
+
+   // .info-popup__header
+   &__header {
+      text-align: center;
+      margin-bottom: 26px;
+   }
+
+   // .info-popup__sub-title
+   &__sub-title {
+      color: #89FF00;
+      font-size: 16px;
+      line-height: 109.02%;
+   }
+
+   // .info-popup__title
+   &__title {
+      font-family: Compov2Bold;
+      font-size: 28px;
+      line-height: 97.02%;
+      text-transform: uppercase;
+      color: #FFFFFF;
+   }
+
+   // .info-popup__content
+   &__content {
+   }
+}
+
+.pyramid {
+
+   // .pyramid__level-one
+   &__level-one {
+      padding: 6px 0px 8px 0px;
+   }
+
+   // .pyramid__block
+   &__block {
+      display: flex;
+      gap: 19px;
+      align-items: center;
+      justify-content: center;
+   }
+
+   // .pyramid__circle
+   &__circle {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #FFFFFF;
+
+      color: #451094;
+      font-size: 20px;
+      line-height: 34px;
+      text-align: center;
+      font-family: Compov2Light;
+
+      // .pyramid__circle_big
+      &_big {
+         width: 42px;
+         height: 42px;
+      }
+   }
+
+   // .pyramid__level-two
+   &__level-two {
+      padding: 6px 0px 8px 0px;
+   }
+
+   // .pyramid__level-three
+   &__level-three {
+      padding: 6px 0px 8px 0px;
+      position: relative;
+   }
+
+   // .pyramid__level-four
+   &__level-four {
+      padding: 6px 0px 8px 0px;
+      position: relative;
+   }
+
+   // .pyramid__level-five
+   &__level-five {
+      padding: 6px 0px 8px 0px;
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      position: relative;
+   }
+
+   &__level-five  &__circle {
+      color: #FFFFFF;
+      background: #88FE07;
+   }
+
+   // .pyramid__level-six
+   &__level-six {
+      padding: 6px 0px 8px 0px;
+      position: relative;
+   }
+
+   &__level-six &__circle {
+      color: #FFFFFF;
+      background: #EE80B1;
+   }
+
+   &__row-head {
+      font-family:Compov2Light;
+      font-size: 20px;
+      line-height: 100%;
+      position: absolute;
+      top: 13px;
+      left: 0;
+   }
+
+   &__deposit {
+      font-family: Compov2Light;
+      font-size: 20px;
+      line-height: 100%;
+      position: absolute;
+      color: #FFFFFF;
+      top: 4px;
+      right: 0;
+
+      span {
+         color: #88FE07;
+      }
+   }
+}
+
+//====================================================================================================

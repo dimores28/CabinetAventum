@@ -4,7 +4,95 @@
    <body>
       <div class="wrapper">
          @@include('html/_header.htm',{})
-         <main class="page"></main>
+         <main class="page">
+            <section class="tickets">
+               <div class="tickets__container">
+                  <div class="tickets__header">
+                     <h2 class="tickets__title page-title">Tickets</h2>
+                     <div class="tickets__filters btn-group" role="group" aria-label="tickets filters">
+                        <button type="button" class="btn btn-white tickets__btn _active">My tickets</button>
+                        <button type="button" class="btn btn-white tickets__btn">Partner tickets</button>
+                        <button type="button" class="btn btn-white tickets__btn">Templates</button>
+                     </div>
+                  </div>
+
+                  <div class="tickets__controls">
+                     <button type="button" class="btn">
+                        <span>Create a ticket</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M10 1.75C5.44365 1.75 1.75 5.44365 1.75 10C1.75 14.5563 5.44365 18.25 10 18.25C14.5563 18.25 18.25 14.5563 18.25 10C18.25 5.44365 14.5563 1.75 10 1.75ZM0.25 10C0.25 4.61522 4.61522 0.25 10 0.25C15.3848 0.25 19.75 4.61522 19.75 10C19.75 15.3848 15.3848 19.75 10 19.75C4.61522 19.75 0.25 15.3848 0.25 10ZM10 4.25C10.4142 4.25 10.75 4.58579 10.75 5V9.25H15C15.4142 9.25 15.75 9.58579 15.75 10C15.75 10.4142 15.4142 10.75 15 10.75H10.75V15C10.75 15.4142 10.4142 15.75 10 15.75C9.58579 15.75 9.25 15.4142 9.25 15V10.75H5C4.58579 10.75 4.25 10.4142 4.25 10C4.25 9.58579 4.58579 9.25 5 9.25H9.25V5C9.25 4.58579 9.58579 4.25 10 4.25Z"/>
+                        </svg> 
+                     </button>
+                     <a href="#">Instruction</a>
+                  </div>
+
+                  <div class="tickets__history">
+                     <div class="history">
+                        <!-- <div class="history__header">
+                           <h3 class="history__title">Recent transactions</h3>
+                           <a href="#" class="history__linck">
+                              <span>More</span>
+                              <svg
+                                 width="16"
+                                 height="8"
+                                 viewBox="0 0 16 8"
+                                 fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M12.1716 0.464469L15.3536 3.64645C15.5488 3.84171 15.5488 4.15829 15.3536 4.35356L12.1716 7.53554C11.9763 7.7308 11.6597 7.7308 11.4645 7.53554C11.2692 7.34028 11.2692 7.02369 11.4645 6.82843L13.7929 4.5L3.656e-07 4.5L2.78178e-07 3.5L13.7929 3.5L11.4645 1.17158C11.2692 0.976314 11.2692 0.659732 11.4645 0.464469C11.6597 0.269207 11.9763 0.269207 12.1716 0.464469Z"
+                                    fill="#74DA06" />
+                              </svg>
+                           </a>
+                        </div> -->
+                        <div class="history__body">
+                           <table class="table">
+                              <thead>
+                                 <tr>
+                                    <th>ID</th>
+                                    <th scope="col">THEME</th>
+                                    <th scope="col">TEXT</th>
+                                    <th scope="col">ATTACHMENTS</th>
+                                    <th scope="col">CREATED</th>
+                                    <th scope="col">DATE</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <th scope="row">1</th>
+                                    <td>Not work Enter</td>
+                                    <td>my enter hasn't been working since yesterday</td>
+                                    <td>1 file</td>
+                                    <td>1 month ago</td>
+                                    <td>2023-03-20 17:33:13</td>
+                                 </tr>
+
+                                 <tr>
+                                    <th scope="row">2</th>
+                                    <td>Not work Enter</td>
+                                    <td>my enter hasn't been working since yesterday</td>
+                                    <td>1 file</td>
+                                    <td>1 month ago</td>
+                                    <td>2023-03-20 17:33:13</td>
+                                 </tr>
+
+                                 <tr>
+                                    <th scope="row">14</th>
+                                    <td>Not work Enter</td>
+                                    <td>my enter hasn't been working since yesterday</td>
+                                    <td>1 file</td>
+                                    <td>1 month ago</td>
+                                    <td>2023-03-20 17:33:13</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </main>
          @@include('html/_aside.htm',{}) @@include('html/_footer.htm',{})
       </div>
       @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})

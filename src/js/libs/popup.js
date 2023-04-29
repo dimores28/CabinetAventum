@@ -320,7 +320,7 @@ class Popup {
 
 		const buttons = document.querySelector(`[${this.options.attributeOpenButton} = "${classInHash}"]`) ? document.querySelector(`[${this.options.attributeOpenButton} = "${classInHash}"]`) : document.querySelector(`[${this.options.attributeOpenButton} = "${classInHash.replace('.', "#")}"]`);
 
-		this.youTubeCode = buttons.getAttribute(this.options.youtubeAttribute) ?
+		this.youTubeCode = buttons?.getAttribute(this.options.youtubeAttribute) ?
 			buttons.getAttribute(this.options.youtubeAttribute) :
 			null;
 
@@ -352,7 +352,7 @@ class Popup {
 		if (!this.isOpen && this.lastFocusEl) {
 			this.lastFocusEl.focus();
 		} else {
-			focusable[0].focus();
+			focusable[0]?.focus();
 		}
 	}
 	// Функція виведення в консоль

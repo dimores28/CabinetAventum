@@ -82,28 +82,36 @@ $('.bonuses__title').on('click', function() {
 
 });
 
-const start = flsModules.datepicker('#dateFrom', {
-     id: 1,
-     formatter: (input, date, instance) => {
-        const options = { year: '2-digit', month: '2-digit', day: '2-digit' };
-        const value = date.toLocaleDateString('en-UK', options)
-        input.value = value
-    }
-});
-const end = flsModules.datepicker('#dateTo', { 
-    id: 1,
-    formatter: (input, date, instance) => {
-        const options = { year: '2-digit', month: '2-digit', day: '2-digit' };
-        const value = date.toLocaleDateString('en-UK', options)
-        input.value = value
-    }
- });
+if(document.querySelector('#dateFrom')) {
+
+    const start = flsModules.datepicker('#dateFrom', {
+        id: 1,
+        formatter: (input, date, instance) => {
+           const options = { year: '2-digit', month: '2-digit', day: '2-digit' };
+           const value = date.toLocaleDateString('en-UK', options)
+           input.value = value
+       }
+    });
+   const end = flsModules.datepicker('#dateTo', { 
+       id: 1,
+       formatter: (input, date, instance) => {
+           const options = { year: '2-digit', month: '2-digit', day: '2-digit' };
+           const value = date.toLocaleDateString('en-UK', options)
+           input.value = value
+       }
+    });
+}
 
 
  $('.info-bord__btn').on('click', function() {
     flsModules.popup.open('#popup')
  })
 
- document.addEventListener("afterPopupOpen", function (e) {
+document.addEventListener("afterPopupOpen", function (e) {
     $('body').css("padding-right", "0px");
+});
+
+$('.tickets__btn').on('click', function() {
+    $('.tickets__btn').removeClass('_active');
+    $(this).addClass('_active');
 });
