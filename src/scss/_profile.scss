@@ -1,0 +1,205 @@
+//====================================================================================================
+.profile {
+   padding-top: 35px;
+   margin-bottom: 28px;
+
+   // .profile__container
+   &__container {
+   }
+
+   // .profile__title
+   &__title {
+   }
+
+   // .profile__settings
+   &__settings {
+      display: flex;
+      align-items: start;
+      gap: 20px;
+   }
+
+   &__block {
+      background: #210052;
+      border-radius: 11px;
+   }
+
+   // .profile__info
+   &__info {
+      flex: 1 1 420px;
+      padding: 19px 21px 28px 21px;
+   }
+
+   // .profile__img
+   &__img {
+      border-radius: 11px;
+      overflow: hidden;
+      margin-bottom: 26px;
+
+      img {
+         width: 100%;
+         height: auto;
+         object-fit: cover;
+         border-radius: 11px;
+      }
+   }
+
+   // .profile__statistics
+   &__statistics {
+   }
+
+   // .profile__list
+   &__list {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 24px;
+   }
+
+   // .profile__list-item
+   &__list-item {
+      padding: 0 41px;
+      border-right: 1px solid #FFFFFF;
+
+      font-size: 24px;
+      line-height: 30px;
+      text-align: center;
+      margin-bottom: 4px;
+
+      &:last-child {
+         border-right: none;
+      }
+
+      span {
+         font-size: 14px;
+         line-height: 17px;
+         display: block;
+      }
+   }
+
+   // .profile__name
+   &__name {
+      font-family: Compov2Light;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 100%;
+      text-align: center;
+      margin-bottom: 24px;
+   }
+
+   // .profile__dop-info
+   &__dop-info {
+      text-align: center;
+
+      span {
+         display: inline-block;
+         margin-bottom: 6px;
+      }
+   }
+}
+//====================================================================================================
+
+//====================================================================================================
+.settings-switch {
+   margin-bottom: 35px;
+
+   // .settings-switch__btn
+   &__btn {
+      margin-right: 12px;
+   }
+}
+
+.settings {
+   flex: 1 1 550px;
+   padding: 22px 26px 30px 32px;
+
+   &__title {
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 30px;
+   }
+
+   // .settings__card
+   &__card {
+      display: none;
+   }
+}
+//====================================================================================================
+
+//====================================================================================================
+.wallets {
+
+   // .wallets__title
+   &__title {
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 18px;
+   }
+
+   // .wallets__item
+   &__item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+   }
+
+   // .wallets__label
+   &__label {
+      display: block;
+      width: 37px;
+      height: 37px;
+      border-radius: 50%;
+      background: #74DA06;
+      position: relative;
+      flex-shrink: 0;
+      flex-grow: 0;
+
+      img {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+   }
+
+   // .wallets__input
+   &__input {
+      width: 100%;
+      background: #451094;
+      border-radius: 11px;
+
+      font-size: 14px;
+      line-height: 17px;
+      color: #FFFFFF;
+      padding: 12px 20px;
+      outline: none;
+      transition: all 0.4s ease-in;
+
+      &:focus,
+      &:focus-visible,
+      &:active {
+         box-shadow: rgba(116, 218, 6, 0.16) 0px 1px 4px, rgb(116, 218, 6) 0px 0px 0px 3px;
+      }
+   }
+
+   // .wallets__btn
+   &__btn {
+      color:#FFFFFF;
+      background: #74DA06;
+      display: block;
+      margin-left: auto;
+
+      &:hover {
+         color: #74DA06;
+         background: #FFFFFF;
+      }
+
+      &:focus,
+      &:focus-visible,
+      &:active {
+         box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px, rgb(255, 255, 255) 0px 0px 0px 3px;
+      }
+   }
+}
+//====================================================================================================
+

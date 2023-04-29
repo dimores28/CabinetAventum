@@ -4,7 +4,115 @@
    <body>
       <div class="wrapper">
          @@include('html/_header.htm',{})
-         <main class="page"></main>
+         <main class="page">
+            <section class="profile">
+               <div class="profile__container">
+                  <h2 class="profile__title page-title">Profile</h2>
+
+                  <div class="settings-switch">
+                     <button 
+                        type="button" 
+                        class="btn btn-white settings-switch__btn" 
+                        aria-expanded="true" 
+                        data-bs-target="#profileSettings" 
+                        aria-controls="profileSettings"
+                     >
+                        Profile settings
+                     </button>
+                     <button 
+                        type="button" 
+                        class="btn btn-white settings-switch__btn" 
+                        aria-expanded="false" 
+                        data-bs-target="#paymentData" 
+                        aria-controls="paymentData"
+                     >
+                        Payment data
+                     </button>
+                  </div>
+
+                  <div class="profile__settings">
+                     <div class="settings profile__block">
+                        <div class="settings__card" id="profileSettings">
+                           <h3 class="settings__title">Profile settings</h3>
+                        </div>
+
+                        <div class="settings__card" id="paymentData">
+                           <h3 class="settings__title">Changing payment information</h3>
+
+                           <form>
+                              <div class="wallets">
+                                 <h4 class="wallets__title">User info:</h4>
+                                 <div class="wallets__item">
+                                    <label for="tether" class="wallets__label">
+                                       <img src="@img/profile/Tether.png" alt="Tether">
+                                    </label>
+                                    <input type="text" id="tether" name="tether" class="wallets__input" 
+                                    aria-label="input tether wallet">
+                                 </div>
+
+                                 <div class="wallets__item">
+                                    <label for="bitcoin" class="wallets__label">
+                                       <img src="@img/profile/Bitcoin.png" alt="Bitcoin">
+                                    </label>
+                                    <input type="text" id="bitcoin" name="bitcoin" class="wallets__input" 
+                                    aria-label="input bitcoin wallet">
+                                 </div>
+
+                                 <div class="wallets__item">
+                                    <label for="ethereum" class="wallets__label">
+                                       <img src="@img/profile/Ethereum.png" alt="Ethereum">
+                                    </label>
+                                    <input type="text" id="ethereum" name="ethereum" class="wallets__input" 
+                                    aria-label="input ethereum wallet">
+                                 </div>
+
+                                 <div class="wallets__item">
+                                    <label for="CreditCard" class="wallets__label">
+                                       <img src="@img/profile/CreditCard.png" alt="CreditCard">
+                                    </label>
+                                    <input type="text" id="CreditCard" name="CreditCard" class="wallets__input" 
+                                    aria-label="input CreditCard wallet">
+                                 </div>
+
+                                 <button type="submit" class="btn wallets__btn" aria-label="save wallets adres">Save</button>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+
+                     <div class="profile__info profile__block">
+                        <div class="profile__img">
+                           <img src="@img/profile/photo.jpg" alt="user photo">
+                        </div>
+                        <div class="profile__statistics">
+                           <ul class="profile__list">
+                              <li class="profile__list-item">
+                                 135
+                                 <span>Partners</span>
+                              </li>
+                              <li class="profile__list-item">
+                                 0.00
+                                 <span>Income</span>
+                              </li>
+                              <li class="profile__list-item">
+                                 0.00
+                                 <span>Turnover</span>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="profile__name">
+                           <span>Community, 34</span> <br>
+                           <span>United Kingdom</span>
+                        </div>
+                        <div class="profile__dop-info">
+                           <span>Invited - admin@monexo-invest.com</span> <br>
+                           <span>Registered: 2023-03-08 15:35:31</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </main>
          @@include('html/_aside.htm',{}) @@include('html/_footer.htm',{})
       </div>
       @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})

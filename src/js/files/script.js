@@ -115,3 +115,20 @@ $('.tickets__btn').on('click', function() {
     $('.tickets__btn').removeClass('_active');
     $(this).addClass('_active');
 });
+
+
+$('.settings-switch__btn').each(function(indx, element){
+    if( $(element).attr('aria-expanded') === 'true') {
+        $(element).toggleClass('_active');
+        $($(element).attr('data-bs-target')).slideDown();
+    }
+});
+
+$('.settings-switch__btn').on('click', function() {
+    $('.settings-switch__btn').removeClass('_tabOpen');
+    $(this).addClass('_tabOpen');
+
+    $('.settings__card').slideUp();
+    $($(this).attr('data-bs-target')).slideDown();
+
+});
