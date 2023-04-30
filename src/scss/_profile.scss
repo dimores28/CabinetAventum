@@ -164,42 +164,164 @@
 
    // .wallets__input
    &__input {
-      width: 100%;
-      background: #451094;
-      border-radius: 11px;
-
-      font-size: 14px;
-      line-height: 17px;
-      color: #FFFFFF;
-      padding: 12px 20px;
-      outline: none;
-      transition: all 0.4s ease-in;
-
-      &:focus,
-      &:focus-visible,
-      &:active {
-         box-shadow: rgba(116, 218, 6, 0.16) 0px 1px 4px, rgb(116, 218, 6) 0px 0px 0px 3px;
-      }
    }
 
    // .wallets__btn
    &__btn {
-      color:#FFFFFF;
-      background: #74DA06;
       display: block;
       margin-left: auto;
+   }
+}
+//====================================================================================================
+
+.change-password {
+   margin-bottom: 30px;
+
+   &__title {
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 20px;
+   }
+
+   &__group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      @media (max-width:$mobile){
+          flex-wrap: wrap; 
+          gap: 0;
+      }
+   }
+
+   &__group > &__control {
+      width: 100%;
+
+      @media (max-width:$mobile){
+          flex: 1 1 100% 
+      }
+   }
+
+   &__control {
+      position: relative;
 
       &:hover {
-         color: #74DA06;
-         background: #FFFFFF;
+         &::after {
+            cursor: pointer;
+         }
       }
 
-      &:focus,
-      &:focus-visible,
-      &:active {
-         box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px, rgb(255, 255, 255) 0px 0px 0px 3px;
+      &::after {
+         content: '';
+         position: absolute;
+         top: 10px;
+         right: 8px;
+         width: 24px;
+         height: 24px;
+         border-radius: 50%;
+         background-image: url(../img/profile/show.svg);
+         background-position: center center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         transition: all 0.4s ease-in;
+      }
+
+      &._visible{
+         &::after {
+            background-image: url(../img/profile/hide.svg);
+         }
+      }
+   }
+
+   // .change-password__input
+   &__input {
+      margin-bottom: 10px;
+   }
+
+   // .change-password__btn
+   &__btn {
+      display: block;
+      margin-left: auto;
+   }
+}
+
+//====================================================================================================
+
+
+//====================================================================================================
+.mailing-list {
+   margin-bottom: 30px;
+   // .mailing-list__title
+   &__title {
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 20px;
+   }
+
+   // .mailing-list__radio
+   &__radio {
+      .payment-system__neme {
+         font-size: 14px;
+         line-height: 17px;
+         color: #FFFFFF;
+         text-transform: none;
+      }
+
+      .payment-system__item {
+         padding: 22px 0px 0px 34px;
+      }
+
+      .payment-system__item:before {
+         background-color: #210052;
       }
    }
 }
+//====================================================================================================
+
+
+//====================================================================================================
+.authentication {
+
+   // .authentication__title
+   &__title {
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 20px;
+   }
+
+   &__text {
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 12px;
+
+      strong {
+         color: red;
+         font-size: 14px;
+         line-height: 17px;
+         text-transform: uppercase;
+      }
+   }
+
+   // .authentication__list
+   &__list {
+   }
+
+   // .authentication__list-item
+   &__list-item {
+   }
+
+   // .authentication__form
+   &__form {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      button {
+         min-width: 82px;
+      }
+   }
+}
+
+
 //====================================================================================================
 

@@ -47,9 +47,13 @@
  ::-ms-scrollbar-thumb {
    background: #74DA06;
    border-radius: 4px;
-;
  }
- 
+
+ .simplebar-horizontal .simplebar-scrollbar::before,
+ .simplebar-vertical .simplebar-scrollbar::before {
+   background-color: #74DA06;
+ }
+
 //====================================================================================================
 
 //====================================================================================================
@@ -507,6 +511,46 @@ tbody, td, tfoot, th, thead, tr {
       box-shadow: rgba(116, 218, 6, 0.16) 0px 1px 4px, rgb(116, 218, 6) 0px 0px 0px 3px;
    }
 
+}
+
+.btn-green {
+   color:#FFFFFF;
+   background: #74DA06;
+
+
+   &:hover,
+   &._active {
+      color: #74DA06;
+      background: #FFFFFF;
+   }
+
+   &:focus,
+   &:focus-visible,
+   &:active {
+      box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px, rgb(255, 255, 255) 0px 0px 0px 3px;
+   }
+}
+
+//====================================================================================================
+
+//====================================================================================================
+.input {
+   width: 100%;
+   background: #451094;
+   border-radius: 11px;
+
+   font-size: 14px;
+   line-height: 17px;
+   color: #FFFFFF;
+   padding: 12px 20px;
+   outline: none;
+   transition: all 0.4s ease-in;
+
+   &:focus,
+   &:focus-visible,
+   &:active {
+      box-shadow: rgba(116, 218, 6, 0.16) 0px 1px 4px, rgb(116, 218, 6) 0px 0px 0px 3px;
+   }
 }
 
 //====================================================================================================

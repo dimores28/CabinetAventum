@@ -130,5 +130,22 @@ $('.settings-switch__btn').on('click', function() {
 
     $('.settings__card').slideUp();
     $($(this).attr('data-bs-target')).slideDown();
-
 });
+
+$('.change-password__input').on('click', function(event) {
+    event.stopPropagation();
+})
+
+$('.change-password__control').on('click', function() {
+    console.log('click');
+    let inp = $(this).children("input");
+
+    if (inp.attr("type") === "password") {
+        inp.attr("type", "text");
+        $(this).addClass('_visible');
+    } else {
+        inp.attr("type", "password");
+        $(this).removeClass('_visible');
+    }
+
+})

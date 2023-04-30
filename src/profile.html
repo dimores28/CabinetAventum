@@ -4,7 +4,7 @@
    <body>
       <div class="wrapper">
          @@include('html/_header.htm',{})
-         <main class="page">
+         <main class="page" data-simplebar>
             <section class="profile">
                <div class="profile__container">
                   <h2 class="profile__title page-title">Profile</h2>
@@ -34,6 +34,112 @@
                      <div class="settings profile__block">
                         <div class="settings__card" id="profileSettings">
                            <h3 class="settings__title">Profile settings</h3>
+                           <form>
+                              <div class="change-password">
+                                 <h4 class="change-password__title">A change of the pin code:</h4>
+                                 <div class="change-password__control">
+                                    <input 
+                                       type="password"
+                                       class="change-password__input input" 
+                                       name="currentPassword" 
+                                       placeholder="Current password" 
+                                       aria-labelledby="Current password"
+                                    >
+                                 </div>
+                                 <div class="change-password__group">
+                                    <div class="change-password__control">
+                                       <input 
+                                          type="password" 
+                                          class="change-password__input input" 
+                                          name="newPassword" 
+                                          placeholder="New Password" 
+                                          aria-labelledby="New Password"
+                                       >
+                                    </div>
+                                    <div class="change-password__control">
+                                       <input 
+                                          type="password" 
+                                          class="change-password__input input" 
+                                          name="confirmNewPassword" 
+                                          placeholder="Confirm new password" 
+                                          aria-labelledby="Confirm new password"
+                                       >
+                                    </div>
+                                 </div>
+                                 <button type="submit" class="btn btn-green change-password__btn">Send</button>
+                              </div>
+                           </form>
+
+                           <div class="mailing-list">
+                              <h4 class="mailing-list__title">Receive newsletter:</h4>
+                              <div class="payment-system mailing-list__radio">
+                                 <div class="payment-system__switch">
+                                    <div class="payment-system__item">
+                                       <div class="payment-system__desc">
+                                          <p class="payment-system__neme">
+                                             Once a week
+                                          </p>
+                                       </div>
+                                       <input
+                                          type="radio"
+                                          name="paymentSystem"
+                                          value="Tether"
+                                          checked />
+                                    </div>
+                                    <div class="payment-system__item">
+                                       <div class="payment-system__desc">
+                                          <p class="payment-system__neme">
+                                             Once a month
+                                          </p>
+                                       </div>
+                                       <input
+                                          type="radio"
+                                          name="paymentSystem"
+                                          value="Bitcoin" />
+                                    </div>
+                                    <div class="payment-system__item">
+                                       <div class="payment-system__desc">
+                                          <p class="payment-system__neme">
+                                             Never
+                                          </p>
+                                       </div>
+                                       <input
+                                          type="radio"
+                                          name="paymentSystem"
+                                          value="Ethereum" />
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="authentication">
+                              <h4 class="authentication__title">Two-factor authentication</h4>
+                              <p class="authentication__text">
+                                 Two-factor authentication is currently <strong>DISABLED</strong> <br> To enable:
+                              </p>
+                              <ol class="authentication__list">
+                                 <ol class="authentication__list-item">
+                                    <a href="#">Download app</a>
+                                 </ol>
+                                 <ol class="authentication__list-item">
+                                    Open the OTP app and scan the following QR code
+                                    <div>
+                                       <img src="@img" alt="QR code">
+                                    </div>
+                                 </ol>
+                                 <ol class="authentication__list-item">
+                                    Or enter this code in the authentication app: P4LOGZ43JT6QZ2ME
+                                 </ol>
+                                 <ol class="authentication__list-item">
+                                    Create a one-time password (OTP) and enter the value below:
+                                 </ol>
+                              </ol>
+
+                              <form class="authentication__form">
+                                 <input type="text" class="input">
+                                 <button type="submit" class="btn btn-green">Turn on</button>
+                              </form>
+                           </div>
                         </div>
 
                         <div class="settings__card" id="paymentData">
@@ -46,7 +152,7 @@
                                     <label for="tether" class="wallets__label">
                                        <img src="@img/profile/Tether.png" alt="Tether">
                                     </label>
-                                    <input type="text" id="tether" name="tether" class="wallets__input" 
+                                    <input type="text" id="tether" name="tether" class="wallets__input input" 
                                     aria-label="input tether wallet">
                                  </div>
 
@@ -54,7 +160,7 @@
                                     <label for="bitcoin" class="wallets__label">
                                        <img src="@img/profile/Bitcoin.png" alt="Bitcoin">
                                     </label>
-                                    <input type="text" id="bitcoin" name="bitcoin" class="wallets__input" 
+                                    <input type="text" id="bitcoin" name="bitcoin" class="wallets__input input" 
                                     aria-label="input bitcoin wallet">
                                  </div>
 
@@ -62,7 +168,7 @@
                                     <label for="ethereum" class="wallets__label">
                                        <img src="@img/profile/Ethereum.png" alt="Ethereum">
                                     </label>
-                                    <input type="text" id="ethereum" name="ethereum" class="wallets__input" 
+                                    <input type="text" id="ethereum" name="ethereum" class="wallets__input input" 
                                     aria-label="input ethereum wallet">
                                  </div>
 
@@ -70,11 +176,11 @@
                                     <label for="CreditCard" class="wallets__label">
                                        <img src="@img/profile/CreditCard.png" alt="CreditCard">
                                     </label>
-                                    <input type="text" id="CreditCard" name="CreditCard" class="wallets__input" 
+                                    <input type="text" id="CreditCard" name="CreditCard" class="wallets__input input" 
                                     aria-label="input CreditCard wallet">
                                  </div>
 
-                                 <button type="submit" class="btn wallets__btn" aria-label="save wallets adres">Save</button>
+                                 <button type="submit" class="btn btn-green wallets__btn" aria-label="save wallets adres">Save</button>
                               </div>
                            </form>
                         </div>
