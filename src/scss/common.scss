@@ -247,6 +247,10 @@
       outline: none;
       transition: all 0.4s ease-in;
 
+      &:hover {
+         background: #451094;
+      }
+
       &:focus,
       &:focus-visible,
       &:active {
@@ -409,6 +413,10 @@ tbody, td, tfoot, th, thead, tr {
 
       outline: none;
       transition: all 0.4s ease-in;
+
+      &:hover {
+         background: #451094;
+      }
 
       &:focus,
       &:focus-visible,
