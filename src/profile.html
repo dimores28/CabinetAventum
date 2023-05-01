@@ -9,23 +9,23 @@
                <div class="profile__container">
                   <h2 class="profile__title page-title">Profile</h2>
 
-                  <div class="settings-switch">
-                     <button 
-                        type="button" 
-                        class="btn btn-white settings-switch__btn" 
-                        aria-expanded="true" 
-                        data-bs-target="#profileSettings" 
-                        aria-controls="profileSettings"
-                     >
+                  <div
+                     class="settings-switch"
+                     data-da=".profile__settings,690,1">
+                     <button
+                        type="button"
+                        class="btn btn-white settings-switch__btn"
+                        aria-expanded="true"
+                        data-bs-target="#profileSettings"
+                        aria-controls="profileSettings">
                         Profile settings
                      </button>
-                     <button 
-                        type="button" 
-                        class="btn btn-white settings-switch__btn" 
-                        aria-expanded="false" 
-                        data-bs-target="#paymentData" 
-                        aria-controls="paymentData"
-                     >
+                     <button
+                        type="button"
+                        class="btn btn-white settings-switch__btn"
+                        aria-expanded="false"
+                        data-bs-target="#paymentData"
+                        aria-controls="paymentData">
                         Payment data
                      </button>
                   </div>
@@ -36,42 +36,47 @@
                            <h3 class="settings__title">Profile settings</h3>
                            <form>
                               <div class="change-password">
-                                 <h4 class="change-password__title">A change of the pin code:</h4>
+                                 <h4 class="change-password__title">
+                                    A change of the pin code:
+                                 </h4>
                                  <div class="change-password__control">
-                                    <input 
+                                    <input
                                        type="password"
-                                       class="change-password__input input" 
-                                       name="currentPassword" 
-                                       placeholder="Current password" 
-                                       aria-labelledby="Current password"
-                                    >
+                                       class="change-password__input input"
+                                       name="currentPassword"
+                                       placeholder="Current password"
+                                       aria-labelledby="Current password" />
                                  </div>
                                  <div class="change-password__group">
                                     <div class="change-password__control">
-                                       <input 
-                                          type="password" 
-                                          class="change-password__input input" 
-                                          name="newPassword" 
-                                          placeholder="New Password" 
-                                          aria-labelledby="New Password"
-                                       >
+                                       <input
+                                          type="password"
+                                          class="change-password__input input"
+                                          name="newPassword"
+                                          placeholder="New Password"
+                                          aria-labelledby="New Password" />
                                     </div>
                                     <div class="change-password__control">
-                                       <input 
-                                          type="password" 
-                                          class="change-password__input input" 
-                                          name="confirmNewPassword" 
-                                          placeholder="Confirm new password" 
-                                          aria-labelledby="Confirm new password"
-                                       >
+                                       <input
+                                          type="password"
+                                          class="change-password__input input"
+                                          name="confirmNewPassword"
+                                          placeholder="Confirm new password"
+                                          aria-labelledby="Confirm new password" />
                                     </div>
                                  </div>
-                                 <button type="submit" class="btn btn-green change-password__btn">Send</button>
+                                 <button
+                                    type="submit"
+                                    class="btn btn-green change-password__btn">
+                                    Send
+                                 </button>
                               </div>
                            </form>
 
                            <div class="mailing-list">
-                              <h4 class="mailing-list__title">Receive newsletter:</h4>
+                              <h4 class="mailing-list__title">
+                                 Receive newsletter:
+                              </h4>
                               <div class="payment-system mailing-list__radio">
                                  <div class="payment-system__switch">
                                     <div class="payment-system__item">
@@ -113,74 +118,124 @@
                            </div>
 
                            <div class="authentication">
-                              <h4 class="authentication__title">Two-factor authentication</h4>
+                              <h4 class="authentication__title">
+                                 Two-factor authentication
+                              </h4>
                               <p class="authentication__text">
-                                 Two-factor authentication is currently <strong>DISABLED</strong> <br> To enable:
+                                 Two-factor authentication is currently
+                                 <strong>DISABLED</strong> <br />
+                                 To enable:
                               </p>
                               <ol class="authentication__list">
-                                 <ol class="authentication__list-item">
-                                    <a href="#">Download app</a>
-                                 </ol>
-                                 <ol class="authentication__list-item">
-                                    Open the OTP app and scan the following QR code
-                                    <div>
-                                       <img src="@img" alt="QR code">
+                                 <li class="authentication__list-item">
+                                    <a
+                                       href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=ru&gl=US&pli=1"
+                                       target="_blank"
+                                       >Download app</a
+                                    >
+                                 </li>
+                                 <li class="authentication__list-item">
+                                    Open the OTP app and scan the following QR
+                                    code
+                                    <div class="authentication__qr-code">
+                                       <img
+                                          src="@img/profile/qrcode.jpg"
+                                          alt="QR code" />
                                     </div>
-                                 </ol>
-                                 <ol class="authentication__list-item">
-                                    Or enter this code in the authentication app: P4LOGZ43JT6QZ2ME
-                                 </ol>
-                                 <ol class="authentication__list-item">
-                                    Create a one-time password (OTP) and enter the value below:
-                                 </ol>
+                                 </li>
+                                 <li class="authentication__list-item">
+                                    Or enter this code in the authentication
+                                    app: P4LOGZ43JT6QZ2ME
+                                 </li>
+                                 <li class="authentication__list-item">
+                                    Create a one-time password (OTP) and enter
+                                    the value below:
+                                 </li>
                               </ol>
 
                               <form class="authentication__form">
-                                 <input type="text" class="input">
-                                 <button type="submit" class="btn btn-green">Turn on</button>
+                                 <input type="text" class="input" />
+                                 <button type="submit" class="btn btn-green">
+                                    Turn on
+                                 </button>
                               </form>
                            </div>
                         </div>
 
                         <div class="settings__card" id="paymentData">
-                           <h3 class="settings__title">Changing payment information</h3>
+                           <h3 class="settings__title">
+                              Changing payment information
+                           </h3>
 
                            <form>
                               <div class="wallets">
                                  <h4 class="wallets__title">User info:</h4>
                                  <div class="wallets__item">
                                     <label for="tether" class="wallets__label">
-                                       <img src="@img/profile/Tether.png" alt="Tether">
+                                       <img
+                                          src="@img/profile/Tether.png"
+                                          alt="Tether" />
                                     </label>
-                                    <input type="text" id="tether" name="tether" class="wallets__input input" 
-                                    aria-label="input tether wallet">
+                                    <input
+                                       type="text"
+                                       id="tether"
+                                       name="tether"
+                                       class="wallets__input input"
+                                       aria-label="input tether wallet" />
                                  </div>
 
                                  <div class="wallets__item">
                                     <label for="bitcoin" class="wallets__label">
-                                       <img src="@img/profile/Bitcoin.png" alt="Bitcoin">
+                                       <img
+                                          src="@img/profile/Bitcoin.png"
+                                          alt="Bitcoin" />
                                     </label>
-                                    <input type="text" id="bitcoin" name="bitcoin" class="wallets__input input" 
-                                    aria-label="input bitcoin wallet">
+                                    <input
+                                       type="text"
+                                       id="bitcoin"
+                                       name="bitcoin"
+                                       class="wallets__input input"
+                                       aria-label="input bitcoin wallet" />
                                  </div>
 
                                  <div class="wallets__item">
-                                    <label for="ethereum" class="wallets__label">
-                                       <img src="@img/profile/Ethereum.png" alt="Ethereum">
+                                    <label
+                                       for="ethereum"
+                                       class="wallets__label">
+                                       <img
+                                          src="@img/profile/Ethereum.png"
+                                          alt="Ethereum" />
                                     </label>
-                                    <input type="text" id="ethereum" name="ethereum" class="wallets__input input" 
-                                    aria-label="input ethereum wallet">
+                                    <input
+                                       type="text"
+                                       id="ethereum"
+                                       name="ethereum"
+                                       class="wallets__input input"
+                                       aria-label="input ethereum wallet" />
                                  </div>
 
                                  <div class="wallets__item">
-                                    <label for="CreditCard" class="wallets__label">
-                                       <img src="@img/profile/CreditCard.png" alt="CreditCard">
+                                    <label
+                                       for="CreditCard"
+                                       class="wallets__label">
+                                       <img
+                                          src="@img/profile/CreditCard.png"
+                                          alt="CreditCard" />
                                     </label>
-                                    <input type="text" id="CreditCard" name="CreditCard" class="wallets__input input" 
-                                    aria-label="input CreditCard wallet">
+                                    <input
+                                       type="text"
+                                       id="CreditCard"
+                                       name="CreditCard"
+                                       class="wallets__input input"
+                                       aria-label="input CreditCard wallet" />
                                  </div>
 
-                                 <button type="submit" class="btn btn-green wallets__btn" aria-label="save wallets adres">Save</button>
+                                 <button
+                                    type="submit"
+                                    class="btn btn-green wallets__btn"
+                                    aria-label="save wallets adres">
+                                    Save
+                                 </button>
                               </div>
                            </form>
                         </div>
@@ -188,7 +243,7 @@
 
                      <div class="profile__info profile__block">
                         <div class="profile__img">
-                           <img src="@img/profile/photo.jpg" alt="user photo">
+                           <img src="@img/profile/photo.jpg" alt="user photo" />
                         </div>
                         <div class="profile__statistics">
                            <ul class="profile__list">
@@ -207,11 +262,11 @@
                            </ul>
                         </div>
                         <div class="profile__name">
-                           <span>Community, 34</span> <br>
+                           <span>Community, 34</span> <br />
                            <span>United Kingdom</span>
                         </div>
                         <div class="profile__dop-info">
-                           <span>Invited - admin@monexo-invest.com</span> <br>
+                           <span>Invited - admin@monexo-invest.com</span> <br />
                            <span>Registered: 2023-03-08 15:35:31</span>
                         </div>
                      </div>

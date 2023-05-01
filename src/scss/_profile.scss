@@ -16,6 +16,10 @@
       display: flex;
       align-items: start;
       gap: 20px;
+
+      @media (max-width: 690px){
+         flex-wrap: wrap;
+      }
    }
 
    &__block {
@@ -27,6 +31,10 @@
    &__info {
       flex: 1 1 420px;
       padding: 19px 21px 28px 21px;
+
+      @media (max-width: 690px){
+         order: -2;
+      }
    }
 
    // .profile__img
@@ -34,6 +42,14 @@
       border-radius: 11px;
       overflow: hidden;
       margin-bottom: 26px;
+
+      @media (max-width: 690px) {
+         border-radius: 18px;
+      }
+
+      @media (max-width: 440px) {
+         border-radius: 11px;
+      }
 
       img {
          width: 100%;
@@ -56,13 +72,17 @@
 
    // .profile__list-item
    &__list-item {
-      padding: 0 41px;
+      padding: 0 12%;
       border-right: 1px solid #FFFFFF;
 
       font-size: 24px;
       line-height: 30px;
       text-align: center;
       margin-bottom: 4px;
+
+      @media (max-width: 440px) {
+         padding: 0 10%;
+      }
 
       &:last-child {
          border-right: none;
@@ -102,6 +122,13 @@
 .settings-switch {
    margin-bottom: 35px;
 
+   @media (max-width: 690px) {
+      order: -1;
+      margin-top: 20px;
+      margin-bottom: 0px;
+   }
+
+
    // .settings-switch__btn
    &__btn {
       margin-right: 12px;
@@ -111,6 +138,10 @@
 .settings {
    flex: 1 1 550px;
    padding: 22px 26px 30px 32px;
+
+   @media (max-width:$mobileSmall){
+      padding: 22px 16px 24px 16px;
+   }
 
    &__title {
       font-size: 24px;
@@ -269,10 +300,22 @@
 
       .payment-system__item {
          padding: 22px 0px 0px 34px;
+
+         @media (max-width: 562px){
+            flex: 1 1 auto;
+         }
       }
 
       .payment-system__item:before {
          background-color: #210052;
+      }
+
+      .payment-system__switch {
+         @media (max-width: 390px){
+           flex-direction: column;   
+           align-items: start;
+           gap: 0px;
+         }
       }
    }
 }
@@ -304,10 +347,37 @@
 
    // .authentication__list
    &__list {
+      margin-bottom: 12px;
+      padding-left: 14px;
    }
 
    // .authentication__list-item
    &__list-item {
+      font-size: 14px;
+      line-height: 17px;
+
+      a{
+         text-decoration: underline;
+         outline: none;
+         transition: all 0.4s ease-in;
+
+         &:hover {
+            color: #74DA06;
+         }
+
+         &:focus,
+         &:focus-visible,
+         &:active {
+            color: #74DA06;
+         }
+      }
+   }
+
+   &__qr-code {
+      margin: 12px 0 12px -10px;
+      img {
+         border-radius: 4px;
+      }
    }
 
    // .authentication__form
@@ -315,6 +385,11 @@
       display: flex;
       align-items: center;
       gap: 10px;
+
+      @media (max-width: 430px){
+           flex-wrap: wrap;
+           justify-content: end;
+      }
 
       button {
          min-width: 82px;
