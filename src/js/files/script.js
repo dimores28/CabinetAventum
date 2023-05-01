@@ -104,7 +104,7 @@ if(document.querySelector('#dateFrom')) {
 
 
  $('.info-bord__btn').on('click', function() {
-    flsModules.popup.open('#popup')
+    flsModules.popup.open('#popup');
  })
 
 document.addEventListener("afterPopupOpen", function (e) {
@@ -148,4 +148,8 @@ $('.change-password__control').on('click', function() {
         $(this).removeClass('_visible');
     }
 
+})
+
+$('.tickets__controls button').on('click', function() {
+    flsModules.popup.open('#chat');
 })

@@ -562,3 +562,205 @@ tbody, td, tfoot, th, thead, tr {
 }
 
 //====================================================================================================
+
+
+//====================================================================================================
+.chat {
+   max-width: 640px;
+   background: #451094;
+   border: 3px solid #210052;
+   border-radius: 25px;
+
+   .popup__text {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 12px;
+
+      @media (max-width:$mobileSmall){
+          flex-wrap: wrap; 
+      }
+   }
+
+   &__linck {
+      font-family: Compov2Light;
+      font-size: 24px;
+      line-height: 24px;
+      padding: 6px 13px;
+      border: 1px solid #FFFFFF;
+      border-radius: 8px;
+      outline: none;
+      transition: all 0.4s ease-in;
+
+      &:hover {
+         background: #FFFFFF;
+         color: #451094;
+      }
+   }
+
+   // .chat__contacts
+   &__contacts {
+      text-align: right;
+      font-size: 20px;
+      line-height: 126.52%;
+      margin-bottom: 30px;
+
+      @media (max-width:$mobileSmall){
+         text-align: left;
+      }
+   }
+
+   // .chat__window
+   &__window {
+      margin-bottom: 14px;
+   }
+
+   // .chat__dialogue
+   &__dialogue {
+      background: #210052;
+      border-radius: 14px;
+      padding: 24px 20px;
+      height: 330px;
+      overflow-y: scroll;
+      position: relative;
+   }
+
+   // .chat__message
+   &__message {
+      display: flex;
+      align-items: start;
+      gap: 8px;
+      margin-bottom: 20px;
+      font-size: 20px;
+      line-height: 126.52%;
+
+      // .chat__message_send
+      &_send {
+         padding-right: 14%;
+         @media (max-width:$mobileSmall){
+            padding-right: 10%;  
+         }
+
+         .chat__text,
+         .chat__attached {
+            background: #451094;
+         }
+      }
+
+      // .chat__message_resive
+      &_resive {
+         flex-direction: row-reverse;
+         padding-left: 14%;
+
+         @media (max-width:$mobileSmall){
+            padding-left: 10%;  
+         }
+
+         .chat__text,
+         .chat__attached {
+           background: #7544BD;
+         }
+      }
+   }
+
+   // .chat__avatar
+   &__avatar {
+      width: 28px;
+      height: 28px;
+      overflow: hidden;
+      border-radius: 50%;
+      flex-shrink: 0;
+
+      img {
+         width: 100%;
+         height: auto;
+      }
+   }
+
+   // .chat__text
+   &__text {
+      font-size: 20px;
+      line-height: 126.52%;
+      border-radius: 14px;
+      padding: 10px 12px;
+   }
+
+   // .chat__attached
+   &__attached {
+      font-size: 20px;
+      line-height: 126.52%;
+      border-radius: 14px;
+      padding: 10px 12px 10px 46px;
+      position: relative;
+
+      &::before {
+         content: '';
+         display: block;
+         position: absolute;
+         width: 24px;
+         height: 24px;
+         top: 10px;
+         left: 12px;
+         background: url(../img/icons/clip.svg) center center no-repeat;
+         background-size: cover;
+      }
+
+   }
+
+   // .chat__entry-field
+   &__entry-field {
+      position: relative;
+      margin-top: -16px;
+      
+      textarea {
+         color: #451094;
+         font-size: 20px;
+         line-height: 126.52%;
+         background: #FFFFFF;
+         border-radius: 14px; 
+         width: 100%;
+         height: 98px;
+         
+         padding: 14px 24px;
+         resize: none;
+         outline: none;
+         transition: all 0.4s ease-in;
+
+         &:focus,
+         &:focus-visible,
+         &:active {
+            box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px, rgb(255, 255, 255) 0px 0px 0px 3px;
+         }
+
+      }
+   }
+
+   // .chat__controls
+   &__controls {
+      text-align: right;
+   }
+
+   // .chat__close
+   &__close {
+      border-radius: 8px;
+      border: 1px solid #FFFFFF;
+      margin-right: 18px;
+
+      &:hover {
+         background: #FFFFFF;
+         color: #451094;
+      }
+
+      &:focus,
+      &:focus-visible,
+      &:active {
+         box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px, rgb(255, 255, 255) 0px 0px 0px 3px;
+      }
+   }
+
+   // .chat__btn-send
+   &__btn-send {
+   }
+}
+
+//====================================================================================================
