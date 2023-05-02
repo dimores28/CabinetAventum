@@ -7,8 +7,8 @@
 	&__title {
 		border: 2px solid #FFFFFF;
 		padding: rem(10) rem(24);
-		border-top-left-radius: 75px;
-		border-top-right-radius: 75px;
+		border-top-left-radius: 35px;
+		border-top-right-radius: 35px;
 
 		font-family: Compov2Light;
 		font-size: 24px;
@@ -31,8 +31,8 @@
 
 		@media (max-width:$mobileSmall){
 			padding: rem(10) rem(18);
-			border-top-left-radius: 25px;
-			border-top-right-radius: 25px;  
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;  
 
 			font-size: 18px;
 		}
