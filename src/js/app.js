@@ -132,7 +132,7 @@ import './files/forms/datepicker.js'
 Документація плагіна: https://refreshless.com/nouislider/
 Сніппет (HTML): range
 */
-// import "./files/forms/range.js";
+import "./files/forms/range.js";
 
 /* Модуль роботи з підказками (tippy) */
 /*
