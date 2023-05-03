@@ -1,5 +1,6 @@
 // Підключення з node_modules
 import * as noUiSlider from 'nouislider';
+import  '../../libs/wNumb.min.js';
 
 // Підключення стилів з scss/base/forms/range.scss 
 // у файлі scss/forms/forms.scss
@@ -13,17 +14,29 @@ export function rangeInit() {
 		let textFrom = priceSlider.getAttribute('data-from');
 		let textTo = priceSlider.getAttribute('data-to');
 		noUiSlider.create(priceSlider, {
-			start: 0, // [0,200000]
+			start: 750, // [0,200000]
 			connect: [true, false],
+			step: 50,
+			tooltips: [wNumb({
+				decimals: 0, 
+				thousand: '.',
+				suffix: ' $'})
+			],
 			range: {
-				'min': [0],
-				'max': [200000]
+				'min': [300],
+				'max': [5000]
 			},
-			/*
+
+			pips: {
+				mode: 'values',
+				values: [300, 5000],
+				density: 1000
+		  },
+			
 			format: wNumb({
 				decimals: 0
 			})
-			*/
+			
 		});
 		/*
 		const priceStart = document.getElementById('price-start');

@@ -68,10 +68,18 @@
                               </table>
                            </div>
                            <div class="bord__investment">
-                              <h3>investment amount</h3>
+                              <h3>Investment amount</h3>
+                              <div id="range" data-from="300" data-to="5000" class="bord__range"></div>
+                              <div class="bord__form">
+                                 <form>
+                                    <label for="ownSum" class="bord__label">Enter your amount:</label>
+                                    <input type="number" id="ownSum" class="bord__input" min="300" max="5000" placeholder="min 300$">
+                                    <button type="submit" class="btn btn-white">Invest</button>
+                                 </form>
+                              </div>
                            </div>
                         </div>
-                        <button type="button" class="btn">Invest</button>
+                        <button type="button" class="btn btn-green">Invest</button>
                      </article>
                      <article class="bord__item bord__item_green">
                         <h3 class="bord__title">random</h3>

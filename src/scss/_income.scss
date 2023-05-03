@@ -45,7 +45,6 @@
         background: #FFFFFF;
         border-radius: 8px;
         padding: 23px 44px;
-        height: 279px;
         position: relative;
 
         &::before {
@@ -80,6 +79,158 @@
         line-height: 30px;
         text-transform: uppercase;
         color: #210052;
+        margin-bottom: 16px;
+    }
+
+    // .bord__body
+    &__body {
+        display: flex;
+        align-items: start;
+        gap: 30px;
+    }
+
+    // .bord__info
+    &__info {
+        flex: 1 1 320px;
+        border: 2px solid #74DA06;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        padding-right: 12px;
+        padding-bottom: 12px;
+    }
+
+    // .bord__teble
+    &__teble {
+        width: 100%;
+        caption-side: bottom;
+        border-collapse: collapse;
+
+        th, td {
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: 400;
+            padding: 12px 10px 0px;
+            vertical-align: middle;
+        }
+
+        th {
+            text-align: left;
+            color: #210052;
+        }
+
+        td {
+            text-align: right;
+            color: #74DA06;
+        }
+    }
+
+    // .bord__investment
+    &__investment {
+        flex: 1 1 240px;
+        background: #74DA06;
+        border-radius: 8px;
+        padding: 18px 24px 14px 24px;
+
+        h3 {
+            color: #210052;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 25px;
+            margin-bottom: 28px;
+        }
+    }
+
+    // .bord__range
+    &__range {
+        margin-bottom: 20px;
+    }
+
+    // .bord__form
+    &__form {
+    }
+
+    // .bord__label
+    &__label {
+        display: inline-block;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #210052;
+        margin-bottom: 8px;
+    }
+
+    // .bord__input
+    &__input {
+        width: 100%;
+        border: 1px solid #FFFFFF;
+        border-radius: 8px;
+        color:#210052;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        padding: 6px 14px;
+        margin-bottom: 16px;
+
+        outline: none;
+        transition: all 0.4s ease-in;
+
+        &:focus,
+        &:focus-visible,
+        &:active {
+            box-shadow: rgba(69, 16, 148, 0.16) 0px 1px 4px, rgb(69, 16, 148) 0px 0px 0px 3px;
+        } 
     }
 }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; // Yeah, yeah everybody write about it
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+//====================================================================================================
+
+//====================================================================================================
+#range {
+    height: 5px;
+
+    .noUi-marker {
+        display: none;
+    }
+}
+
+#range .noUi-connect {
+    background: #210052;
+}
+
+#range .noUi-handle {
+    width: 20px;
+    height: 20px;
+    top: -8px;
+    right: -10px; /* half the width */
+    border-radius: 50%;
+    background: #74DA06;
+    border: 4px solid #210052;
+
+    &::before,
+    &::after {
+        display: none;
+    }
+}
+
+#range .noUi-tooltip {
+    color:#210052;
+    background: transparent;
+    border: none;
+}
+
+#range .noUi-pips {
+    color: rgba(33, 0, 82, 0.23)
+}
+
 //====================================================================================================
