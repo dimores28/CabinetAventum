@@ -15,16 +15,24 @@
                      aria-label="tickets filters">
                      <button
                         type="button"
-                        class="btn btn-white income__btn _active">
+                        class="btn btn-white income__btn"
+                        aria-expanded="true"
+                        data-bs-target="#regular"
+                        aria-controls="regular">
                         Regular
                      </button>
-                     <button type="button" class="btn btn-white income__btn">
+                     <button
+                        type="button"
+                        class="btn btn-white income__btn"
+                        aria-expanded="false"
+                        data-bs-target="#random"
+                        aria-controls="random">
                         Random
                      </button>
                   </div>
 
                   <div class="income__bord bord">
-                     <article class="bord__item">
+                     <article class="bord__item" id="regular">
                         <h3 class="bord__title">regular</h3>
                         <div class="bord__body">
                            <div class="bord__info">
@@ -69,20 +77,109 @@
                            </div>
                            <div class="bord__investment">
                               <h3>Investment amount</h3>
-                              <div id="range" data-from="300" data-to="5000" class="bord__range"></div>
+                              <div
+                                 id="range"
+                                 data-from="300"
+                                 data-to="5000"
+                                 class="bord__range"></div>
                               <div class="bord__form">
                                  <form>
-                                    <label for="ownSum" class="bord__label">Enter your amount:</label>
-                                    <input type="number" id="ownSum" class="bord__input" min="300" max="5000" placeholder="min 300$">
-                                    <button type="submit" class="btn btn-white">Invest</button>
+                                    <label for="ownSum" class="bord__label"
+                                       >Enter your amount:</label
+                                    >
+                                    <input
+                                       type="number"
+                                       id="ownSum"
+                                       class="bord__input"
+                                       min="300"
+                                       max="5000"
+                                       placeholder="min 300$" />
+                                    <button
+                                       type="submit"
+                                       class="btn btn-white bord__btn">
+                                       Invest
+                                    </button>
                                  </form>
                               </div>
                            </div>
                         </div>
-                        <button type="button" class="btn btn-green">Invest</button>
+                        <button type="button" class="btn btn-green bord__btn">
+                           Invest
+                        </button>
                      </article>
-                     <article class="bord__item bord__item_green">
+                     <article class="bord__item bord__item_green" id="random">
                         <h3 class="bord__title">random</h3>
+                        <div class="bord__body">
+                           <div class="bord__info">
+                              <table class="bord__teble">
+                                 <tbody>
+                                    <tr>
+                                       <th>Income accruals</th>
+                                       <td>every day from Mon to Fri</td>
+                                    </tr>
+
+                                    <tr>
+                                       <th>Monthly income</th>
+                                       <td>18-30%</td>
+                                    </tr>
+
+                                    <tr>
+                                       <th>First accrual</th>
+                                       <td>48 hours from package payment</td>
+                                    </tr>
+
+                                    <tr>
+                                       <th>Body</th>
+                                       <td>included in payments</td>
+                                    </tr>
+
+                                    <tr>
+                                       <th>Works until earning</th>
+                                       <td>180% of the body</td>
+                                    </tr>
+
+                                    <tr>
+                                       <th>Minimum investment amount</th>
+                                       <td>$300</td>
+                                    </tr>
+
+                                    <tr>
+                                       <th>Maximum amount</th>
+                                       <td>not limited</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                           <div class="bord__investment">
+                              <h3>Investment amount</h3>
+                              <div
+                                 id="rangeRandom"
+                                 data-from="300"
+                                 data-to="5000"
+                                 class="bord__range"></div>
+                              <div class="bord__form">
+                                 <form>
+                                    <label
+                                       for="ownSumRandom"
+                                       class="bord__label"
+                                       >Enter your amount:</label
+                                    >
+                                    <input
+                                       type="number"
+                                       id="ownSumRandom"
+                                       class="bord__input"
+                                       min="300"
+                                       max="5000"
+                                       placeholder="min 300$" />
+                                    <button
+                                       type="submit"
+                                       class="btn btn-white bord__btn">
+                                       Invest
+                                    </button>
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
                      </article>
                   </div>
 

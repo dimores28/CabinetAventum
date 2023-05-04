@@ -10,9 +10,19 @@ import 'nouislider/dist/nouislider.css';
 
 export function rangeInit() {
 	const priceSlider = document.querySelector('#range');
+	const inputNumber = document.querySelector('#ownSum');
+	const investSlider = document.querySelector('#rangeRandom');
+	const ownSumRandom = document.querySelector('#ownSumRandom');
+
+
 	if (priceSlider) {
 		let textFrom = priceSlider.getAttribute('data-from');
 		let textTo = priceSlider.getAttribute('data-to');
+		const range = [];
+
+		range.push(parseInt(textFrom));
+		range.push(parseInt(textTo));
+
 		noUiSlider.create(priceSlider, {
 			start: 750, // [0,200000]
 			connect: [true, false],
@@ -23,14 +33,18 @@ export function rangeInit() {
 				suffix: ' $'})
 			],
 			range: {
-				'min': [300],
-				'max': [5000]
+				'min': range[0],
+				'max': range[1]
 			},
 
 			pips: {
 				mode: 'values',
-				values: [300, 5000],
-				density: 1000
+				values: range,
+				density: 1000,
+				format: wNumb({
+					decimals: 0, 
+					thousand: '.',
+					suffix: ' $'}),
 		  },
 			
 			format: wNumb({
@@ -56,5 +70,67 @@ export function rangeInit() {
 			priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
 		}
 	}
+
+	if(investSlider) {
+		let textFrom = investSlider.getAttribute('data-from');
+		let textTo = investSlider.getAttribute('data-to');
+		const range = [];
+
+		range.push(parseInt(textFrom));
+		range.push(parseInt(textTo));
+
+		noUiSlider.create(investSlider, {
+			start: 750, // [0,200000]
+			connect: [true, false],
+			step: 50,
+			tooltips: [wNumb({
+				decimals: 0, 
+				thousand: '.',
+				suffix: ' $'})
+			],
+			range: {
+				'min': range[0],
+				'max': range[1]
+			},
+
+			pips: {
+				mode: 'values',
+				values: range,
+				density: 1000,
+				format: wNumb({
+					decimals: 0, 
+					thousand: '.',
+					suffix: ' $'}),
+		  },
+			
+			format: wNumb({
+				decimals: 0
+			})
+			
+		});
+	}
+
+	inputNumber?.addEventListener('change', function (event) {
+		event.stopPropagation();
+		priceSlider.noUiSlider.set(this.value);
+	});
+
+	inputNumber?.addEventListener('input', function (event) {
+		event.stopPropagation();
+	});
+
+
+	priceSlider?.noUiSlider.on('update', function (values, handle) {
+		inputNumber.value =  values[handle];
+	});
+
+	investSlider?.noUiSlider.on('update', function (values, handle) {
+		ownSumRandom.value =  values[handle];
+	});
+
+	ownSumRandom?.addEventListener('change', function (event) {
+		event.stopPropagation();
+		investSlider.noUiSlider.set(this.value);
+	});
 }
 rangeInit();

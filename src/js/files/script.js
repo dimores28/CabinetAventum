@@ -125,8 +125,8 @@ $('.settings-switch__btn').each(function(indx, element){
 });
 
 $('.settings-switch__btn').on('click', function() {
-    $('.settings-switch__btn').removeClass('_tabOpen');
-    $(this).addClass('_tabOpen');
+    $('.settings-switch__btn').removeClass('_active');
+    $(this).addClass('_active');
 
     $('.settings__card').slideUp();
     $($(this).attr('data-bs-target')).slideDown();
@@ -153,3 +153,23 @@ $('.change-password__control').on('click', function() {
 $('.tickets__controls button').on('click', function() {
     flsModules.popup.open('#chat');
 })
+
+$('.bord__form form').on('submit', function(event) {
+    event.preventDefault();
+})
+
+
+$('.income__btn').each(function(indx, element){
+    if( $(element).attr('aria-expanded') === 'true') {
+        $(element).toggleClass('_active');
+        $($(element).attr('data-bs-target')).slideDown();
+    }
+});
+
+$('.income__btn').on('click', function() {
+    $('.income__btn').removeClass('_active');
+    $(this).addClass('_active');
+
+    $('.bord__item').slideUp();
+    $($(this).attr('data-bs-target')).slideDown();
+});
