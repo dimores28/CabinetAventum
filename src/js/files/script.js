@@ -137,7 +137,6 @@ $('.change-password__input').on('click', function(event) {
 })
 
 $('.change-password__control').on('click', function() {
-    console.log('click');
     let inp = $(this).children("input");
 
     if (inp.attr("type") === "password") {
@@ -147,7 +146,6 @@ $('.change-password__control').on('click', function() {
         inp.attr("type", "password");
         $(this).removeClass('_visible');
     }
-
 })
 
 $('.tickets__controls button').on('click', function() {
